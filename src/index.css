@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS styles */
+.fadeIn {
+  opacity: 0; /* Initially hide the element */
+  animation: fadeInAnimation 1s ease forwards; /* Animation for fading in */
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    opacity: 1; /* Gradually fade in */
+  }
+}
+
+.frontpage-card {
+  flex: 1 1 20px;
+  transition: flex 0.3s ease-in-out; /* Transition for flex property */
+}
+
+.frontpage-card:hover {
+  flex: 2 1 20px; /* New flex value on hover */
+}
+
+/* When hover ends, wait for 1s then start fadeIn animation */
+.frontpage-card:hover + .fadeIn {
+  animation-delay: 0.3s; /* Delay the fadeIn animation */
+  animation-fill-mode: forwards; /* Keeps the element in its final state */
+}
