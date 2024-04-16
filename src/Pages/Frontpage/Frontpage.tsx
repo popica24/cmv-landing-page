@@ -23,8 +23,8 @@ const Frontpage = () => {
   };
   return (
     <div className="flex flex-row h-screen w-full relative">
-      <div className="absolute left-4 -top-8">
-        <img src="Artboard_1.svg" alt="" width={300} height={191} />
+      <div className="absolute left-8 top-8">
+        <img src="hero.png" alt="" width={300} height={191} />
       </div>
       <div className="frontpage-card">
         <div

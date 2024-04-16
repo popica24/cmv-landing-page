@@ -1,11 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.font-rubik {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
 /* CSS styles */
 .fadeIn {
   opacity: 0; /* Initially hide the element */
   animation: fadeInAnimation 1s ease forwards; /* Animation for fading in */
+}
+
+.bg-linear-contact {
+  background: #ff6600;
+}
+.text-linear-gradient {
+  background: linear-gradient(to right, #200ddf, #ff6600);
+  -webkit-background-clip: text; /* For Safari */
+  color: transparent;
+}
+.bg-linear-contact:hover {
+  opacity: 1;
+  animation: fadeInLinear 1s linear forwards;
+}
+.dotted-border {
+  border-image: url("/public/civil-border.svg");
+}
+@keyframes fadeInLinear {
+  from {
+    background: #ff6600; /* Start from the same color */
+  }
+  to {
+    background: linear-gradient(
+      to right,
+      #200ddf,
+      #ff6600
+    ); /* End at the linear gradient */
+  }
 }
 
 @keyframes fadeInAnimation {

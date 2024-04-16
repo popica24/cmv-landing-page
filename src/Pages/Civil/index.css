@@ -1,0 +1,65 @@
+.loading-bar {
+  animation: loading 0.3s 1.6s ease-out forwards;
+}
+.fadeIn {
+  animation: fadeIn 0.8s 0.8s ease-in-out forwards;
+}
+.delayedfadeIn {
+  opacity: 0%;
+  animation: delayedFadeIn 0.8s 3.2s ease-in-out forwards;
+}
+.slide-from-bottom {
+  animation: slideFromBottom 0.8s ease-out forwards;
+}
+.flip {
+  opacity: 0%;
+  transform-style: preserve-3d;
+  animation: flipAnimation 0.8s 2.4s forwards;
+}
+@keyframes delayedFadeIn {
+  0% {
+    opacity: 1%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes flipAnimation {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  100% {
+    opacity: 100%;
+    transform: rotateX(0deg);
+  }
+}
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(90px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes loading {
+  from {
+    opacity: 50%;
+    width: 0px;
+  }
+  to {
+    opacity: 100%;
+    width: 500px;
+  }
+}
