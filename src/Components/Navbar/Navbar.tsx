@@ -5,11 +5,11 @@ import MobileMenu from "./Components/MobileMenu";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-row items-center justify-between mx-auto lg:container px-4 lg:px-24">
+    <div className="flex flex-row items-center justify-between mx-auto lg:container px-4 lg:px-24 my-8">
       <Link to={"/"}>
         <img
           src="hero.png"
-          className="w-56 sm:w-24 md:w-48 lg:w-40 xl:w-48 2xl:w-56"
+          className="w-48 sm:w-40 md:w-48 lg:w-40 xl:w-48 2xl:w-56"
         />
       </Link>
       <MobileMenu />

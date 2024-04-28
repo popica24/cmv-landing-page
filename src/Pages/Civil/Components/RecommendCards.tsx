@@ -7,13 +7,18 @@ type Props = {
 
 const RecommendCards = (props: Props) => {
   return (
-    <div className="bg-white flex flex-col items-center justify-center py-10 rounded-[10px] flex-shrink-0 sm:w-[230px] w-[160px] text-black m-3">
+    <div className="bg-[#EFEFEF] flex flex-col items-center justify-center px-8 py-10 rounded-[15px] flex-shrink-0 w-[150px] sm:w-[250px] m-4">
       <img
         src={props.imagePath}
         alt="ServiceLogo"
-        className="mb-6 sm:w-[50px] w-[35px]"
+        className="lg:w-[60px] lg:h-[60px] md:w-[50px] md:h-[50px] w-[30px] h-[30px]"
       />
-      {props.text}
+      <div className="border-[3px] my-4 border-transparent w-full" />
+      <div className="max-w-[16ch]">
+        <span className="font-roboto text-[15px] sm:text-[19px]">
+          {props.text}
+        </span>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 const ContactButton = () => {
   return (
-    <button className="inline-flex items-center justify-center bg-[#F26100] rounded-[8px] md:rounded-[24px] px-[5px] md:px-[10px] text-xs md:text-sm py-[2px] md:py-[6px] text-white">
+    <button className="inline-flex items-center whitespace-nowrap justify-center bg-[#F26100] rounded-[8px] md:rounded-[24px] px-[5px] md:px-[10px] text-xs md:text-sm py-[2px] md:py-[6px] text-white">
       <svg
         className="w-[12px] md:w-[14px] me-1"
         viewBox="0 0 23 15"

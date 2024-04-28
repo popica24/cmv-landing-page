@@ -8,17 +8,21 @@ const Civil = () => {
   return (
     <>
       <Navbar />
-      <div className="mt-12 md:mt-48">
+      <div className="mt-12 lg:mt-48">
         <div className="flex flex-col items-center justify-center font-roboto w-full">
-          <h1 className="tracking-wider max-w-[55ch] text-[1rem] sm:text-[1.5rem] lg:text-[2.1rem] font-semibold uppercase ms-0 lg:ms-[18rem] xl:ms-[29.6rem]">
-            Construim legături{" "}
-            <span className="text-linear-gradient text-[1.5rem] sm:text-[2.1rem] lg:text-[2.9rem] font-bold">
-              DURABILE
-            </span>{" "}
-            <br />
-            Nu doar structuri.
-          </h1>
-
+          <div className="relative">
+            <h1 className="tracking-wider max-w-[55ch] text-[1rem] sm:text-[1.5rem] lg:text-[2.1rem] font-semibold uppercase ms-0 lg:ms-[18rem] xl:ms-[29.6rem]">
+              Construim legături{" "}
+              <span className="text-linear-gradient text-[1.5rem] sm:text-[2.1rem] lg:text-[2.9rem] font-bold">
+                DURABILE
+              </span>{" "}
+              <br />
+              Nu doar structuri.
+            </h1>
+            <div className="absolute z-10 -left-4 xl:-top-44 -top-8">
+              <Worker />
+            </div>
+          </div>
           <article className="bg-[#2F4858] w-full flex items-center justify-center flex-col mt-4 pt-4 relative ">
             <div className="max-w-[38ch] sm:max-w-[55ch] lg:max-w-[77ch] flex flex-col md:items-start items-center ms-0 lg:ms-[18rem] xl:ms-[29.6rem]">
               <span className="text-white lg:text-[1.125rem] leading-5 font-normal text-xs md:text-base">
@@ -44,9 +48,7 @@ const Civil = () => {
                 </svg>
               </button>
             </div>
-            <div className="absolute xl:left-20 left-3 xl:bottom-[6rem] lg:bottom-[12rem]">
-              <Worker />
-            </div>
+
             <div className="lg:mt-[9rem]">
               <div className="flex flex-row items-center justify-center">
                 <button
