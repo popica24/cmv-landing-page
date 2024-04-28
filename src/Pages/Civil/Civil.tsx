@@ -4,6 +4,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import Worker from "./Components/Worker";
 import CivilBuildings from "./Components/CivilBuildings";
 import Footer from "../../Components/Footer/Footer";
+import IndustrialBulding from "./Components/IndustrialBulding";
 const Civil = () => {
   const [civil, setCivil] = useState(true);
   return (
@@ -53,7 +54,9 @@ const Civil = () => {
             <div className="lg:mt-[9rem]">
               <div className="flex flex-row items-center justify-center">
                 <button
-                  className="border-2 border-white sm:rounded-t-[20px] rounded-t-[10px] lg:rounded-t-[30px] text-white min-w-[150px] sm:min-w-[250px] lg:min-w-[350px] py-2 lg:text-base text-sm lg:py-3 inline-flex items-center justify-center px-2 me-2 lg:mx-20"
+                  className={`border-2 border-white sm:rounded-t-[20px] rounded-t-[10px] lg:rounded-t-[30px] ${
+                    civil ? "text-black bg-white" : "text-white"
+                  } min-w-[150px] sm:min-w-[250px] lg:min-w-[350px] py-2 lg:text-base text-sm lg:py-3 inline-flex items-center justify-center px-2 me-2 lg:mx-20`}
                   onClick={() => setCivil(true)}
                 >
                   <svg
@@ -76,7 +79,9 @@ const Civil = () => {
                   Constructii civile
                 </button>
                 <button
-                  className="border-2 border-white sm:rounded-t-[20px] rounded-t-[10px] lg:rounded-t-[30px] text-white min-w-[150px] sm:min-w-[250px] lg:min-w-[350px] py-2 lg:text-base text-sm lg:py-3 inline-flex items-center justify-center px-2 ms-2 lg:mx-20"
+                  className={`border-2 border-white sm:rounded-t-[20px] rounded-t-[10px] lg:rounded-t-[30px] ${
+                    civil ? "text-white" : "text-black bg-white"
+                  } min-w-[150px] sm:min-w-[250px] lg:min-w-[350px] py-2 lg:text-base text-sm lg:py-3 inline-flex items-center justify-center px-2 ms-2 lg:mx-20`}
                   onClick={() => setCivil(false)}
                 >
                   <svg
@@ -127,7 +132,7 @@ const Civil = () => {
           </article>
         </div>
       </div>
-      {civil ? <CivilBuildings /> : null}
+      {civil ? <CivilBuildings /> : <IndustrialBulding />}
       <Footer />
     </>
   );
