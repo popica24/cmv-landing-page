@@ -3,7 +3,7 @@ import { useState } from "react";
 const ContactForm = () => {
   const [selectedType, setSelectedType] = useState(1);
   return (
-    <div className="my-8 md:my-16 lg:my-40 max-w-[90vmin] mx-auto xl:max-w-none lg:container">
+    <div className="container mx-auto px-2 py-6 lg:pt-24">
       <div className="grid col-span-1 xl:grid-cols-2">
         <div className="col-span-1 text-center place-content-center">
           <form action="" className="h-full">
@@ -99,7 +99,13 @@ const ContactForm = () => {
           </form>
         </div>
         <div className="col-span-1 hidden xl:block">
-          <img src="form-picture.jpeg" alt="Contact us !" />
+          <div className="flex items-center justify-center w-full">
+            <img
+              src="form-picture.jpeg"
+              alt="Contact us !"
+              className="max-w-[600px] h-auto"
+            />
+          </div>
         </div>
       </div>
     </div>

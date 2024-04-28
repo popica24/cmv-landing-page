@@ -15,7 +15,7 @@ const RecommendCards = (props: Props) => {
       />
       <div className="border-[3px] my-4 border-transparent w-full" />
       <div className="max-w-[16ch]">
-        <span className="font-roboto text-[15px] sm:text-[19px]">
+        <span className="font-roboto text-[14px] sm:text-[19px]">
           {props.text}
         </span>
       </div>

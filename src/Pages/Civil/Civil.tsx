@@ -3,6 +3,7 @@ import "./index.css";
 import Navbar from "../../Components/Navbar/Navbar";
 import Worker from "./Components/Worker";
 import CivilBuildings from "./Components/CivilBuildings";
+import Footer from "../../Components/Footer/Footer";
 const Civil = () => {
   const [civil, setCivil] = useState(true);
   return (
@@ -127,6 +128,7 @@ const Civil = () => {
         </div>
       </div>
       {civil ? <CivilBuildings /> : null}
+      <Footer />
     </>
   );
 };
