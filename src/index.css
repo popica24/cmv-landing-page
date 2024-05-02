@@ -27,6 +27,11 @@
   -webkit-background-clip: text; /* For Safari */
   color: transparent;
 }
+.text-linear-gradient-green {
+  background: linear-gradient(to right, #487288, #6ea73c);
+  -webkit-background-clip: text; /* For Safari */
+  color: transparent;
+}
 .bg-linear-contact:hover {
   opacity: 1;
   animation: fadeInLinear 1s linear forwards;

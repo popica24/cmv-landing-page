@@ -1,15 +1,12 @@
 import { useState } from "react";
 import "./index.css";
-import Navbar from "../../Components/Navbar/Navbar";
 import Worker from "./Components/Worker";
 import CivilBuildings from "./Components/CivilBuildings";
-import Footer from "../../Components/Footer/Footer";
 import IndustrialBulding from "./Components/IndustrialBulding";
 const Civil = () => {
   const [civil, setCivil] = useState(true);
   return (
     <>
-      <Navbar />
       <div className="mt-12 lg:mt-48">
         <div className="flex flex-col items-center justify-center font-roboto w-full">
           <div className="relative">
@@ -133,7 +130,6 @@ const Civil = () => {
         </div>
       </div>
       {civil ? <CivilBuildings /> : <IndustrialBulding />}
-      <Footer />
     </>
   );
 };

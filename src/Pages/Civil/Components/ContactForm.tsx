@@ -1,7 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const ContactForm = () => {
+  const location = useLocation();
+
+  const [color, setColor] = useState("");
+  useEffect(() => {
+    switch (location.pathname) {
+      case "/civil":
+        setColor("#F26100");
+        break;
+      case "/solar":
+        setColor("#6EA73C");
+        break;
+      default:
+        setColor("#487288");
+    }
+  }, [location.pathname]);
   const [selectedType, setSelectedType] = useState(1);
+  const border = `border-[${color}]`;
+  const bg = `bg-[${color}]`;
   return (
     <div className="container mx-auto px-2 py-6 lg:pt-24">
       <div className="grid col-span-1 xl:grid-cols-2">
@@ -30,8 +48,8 @@ const ContactForm = () => {
                 <label
                   onClick={() => setSelectedType(1)}
                   htmlFor="persoana_fizica"
-                  className={`rounded-[23.5px] border border-[#F26100] px-6 py-1.5 min-w-[167.38px] me-[6px] cursor-pointer ${
-                    selectedType == 1 && "bg-[#F26100] text-white"
+                  className={`rounded-[23.5px] border ${border} px-6 py-1.5 min-w-[167.38px] me-[6px] cursor-pointer ${
+                    selectedType == 1 && `${bg} text-white`
                   }`}
                 >
                   Persoana fizică
@@ -39,8 +57,8 @@ const ContactForm = () => {
                 <label
                   onClick={() => setSelectedType(2)}
                   htmlFor="persoana_juridica"
-                  className={`rounded-[23.5px] border border-[#F26100] px-6 py-1.5 min-w-[167.38px] ms-[6px] cursor-pointer whitespace-nowrap ${
-                    selectedType == 2 && "bg-[#F26100] text-white"
+                  className={`rounded-[23.5px] border ${border} px-6 py-1.5 min-w-[167.38px] ms-[6px] cursor-pointer whitespace-nowrap ${
+                    selectedType == 2 && `${bg} text-white`
                   }`}
                 >
                   Persoana juridică
@@ -91,7 +109,7 @@ const ContactForm = () => {
               ></textarea>
               <button
                 type="submit"
-                className="bg-[#2F4858] text-white px-8 py-2.5 rounded-[42px] mt-6 text-[13px] hover:bg-[#F26100] w-full sm:w-min"
+                className={`bg-[#2F4858] text-white px-8 py-2.5 rounded-[42px] mt-6 text-[13px] hover:${bg} w-full sm:w-min`}
               >
                 Trimite
               </button>
