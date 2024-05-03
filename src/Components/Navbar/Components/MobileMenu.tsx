@@ -13,13 +13,13 @@ const MobileMenu = () => {
         <div className="float-right min-h-full w-[85%] bg-white px-6 pt-12 shadow-2xl">
           <menu>
             <li>
-              <a href="/">Civil and Industrial</a>
+              <a href="/civil-and-industrial">Civil and Industrial</a>
             </li>
             <li>
-              <a href="/contact">Solar energy</a>
+              <a href="/solar-energy">Solar energy</a>
             </li>
             <li>
-              <a href="/contact">Marin Services</a>
+              <a href="/marine-services">Marin Services</a>
             </li>
             <div className="flex flex-row items-center my-3">
               <svg
