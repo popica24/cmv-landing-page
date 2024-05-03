@@ -1,110 +1,105 @@
-import { CSSProperties, useState } from "react";
+import { useState } from "react";
+import civilIndustrial from "../../../public/civil-industrial.jpg";
+import solarEnergy from "../../../public/solar-energy.jpg";
+import marinServices from "../../../public/marin-services.jpg";
+import { motion } from "framer-motion";
 import NavPill from "./components/NavPill";
-
 const Frontpage = () => {
   document.title = "CMV Electrical Solutions | Acasa";
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
-  const [civilHover, setCivilHover] = useState(false);
-  const [solarHover, setSolarHover] = useState(false);
-  const [marineHover, setMarineHover] = useState(false);
+  const handleCardHover = (index: number) => {
+    setExpandedIndex(index == expandedIndex ? -1 : index);
+  };
 
-  const civilIndustrialBg: CSSProperties = {
-    backgroundImage: "url(civil-industrial.jpg)",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
+  const cardVariants = {
+    expanded: {
+      flex: "2 1 20px",
+    },
+    collapsed: {
+      flex: "1 1 20px",
+    },
   };
-  const solarEnergyBg: CSSProperties = {
-    backgroundImage: "url(solar-energy.jpg)",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  };
-  const marinServicesBg: CSSProperties = {
-    backgroundImage: "url(marin-services.jpg)",
-    backgroundSize: "cover",
-    backgroundPosition: "70%",
-  };
+
+  const cardLinks = [
+    {
+      title: "Civil and Industrial",
+      text: "Expertiză în construcții civile și industriale, creând infrastructuri durabile și inovatoare.",
+      left: {
+        text: "Civile",
+        link: "/civil-and-industrial",
+        state: true,
+      },
+      right: {
+        text: "Industriale",
+        link: "/civil-and-industrial",
+        state: false,
+      },
+    },
+    {
+      title: "Solar Energy",
+      text: "Descoperă soluții eco-friendly și economice pentru energie solară - panouri solare de înaltă calitate, instalate de profesioniști experimentați.",
+      left: {
+        text: "Rezidentiale",
+        link: "/solar-energy",
+        state: true,
+      },
+      right: {
+        text: "Industriale",
+        link: "/solar-energy",
+        state: false,
+      },
+    },
+    {
+      title: "Marin Services",
+      text: "Servicii maritime de încredere: reparatii, mentenanta si consultanta pentru ambarcatiuni, asigurând navigare sigură și eficientă pe tot parcursul.",
+      left: {
+        text: "Industriale",
+        link: "/marine-services",
+        state: true,
+      },
+    },
+  ];
+
+  const cardImages = [civilIndustrial, solarEnergy, marinServices];
   return (
-    <div className="flex flex-row h-screen w-full relative">
-      <div className="absolute left-8 top-8">
-        <img src="hero.png" alt="" width={300} height={191} />
-      </div>
-      <div className="frontpage-card">
-        <div
-          className="h-full"
-          style={civilIndustrialBg}
-          onMouseEnter={() => setCivilHover(true)}
-          onMouseLeave={() => setCivilHover(false)}
-        >
-          <div className="flex flex-col h-full justify-between">
-            <span className="text-center text-white text-4xl font-medium drop-shadow-md mt-28">
-              Civil and Industrial
-            </span>
-
-            <div className={`mb-28 ${civilHover ? "fadeIn" : "hidden"}`}>
-              <NavPill
-                text={
-                  "Expertiză în construcții civile și industriale, creând infrastructuri durabile și inovatoare."
-                }
-                leftLinkText={"Civile"}
-                rightLinkText={"Industriale"}
-                leftLink={"civil-and-industrial"}
-                rightLink={"industriale"}
-              />
+    <>
+      <div className="flex flex-col h-screen md:flex-row justify-center items-center">
+        {[0, 1, 2].map((i) => (
+          <motion.div
+            key={i}
+            className={`card cursor-pointer h-screen w-screen bg-cover bg-center ${
+              i === expandedIndex ? "expanded" : ""
+            }`}
+            variants={cardVariants}
+            initial="collapsed"
+            animate={i === expandedIndex ? "expanded" : "collapsed"}
+            transition={{ duration: 0.5 }}
+            onMouseEnter={() => handleCardHover(i)}
+            style={{
+              backgroundImage: `url(${cardImages[i]})`,
+            }}
+          >
+            <div className="flex flex-col items-center justify-between h-full pb-24 pt-32">
+              <span className=" md:text-4xl text-white font-medium">
+                {cardLinks[i].title}
+              </span>
+              {expandedIndex == i && (
+                <NavPill
+                  text={cardLinks[i].text}
+                  leftLinkText={cardLinks[i].left.text}
+                  rightLinkText={cardLinks[i].right?.text}
+                  leftLink={cardLinks[i].left.link}
+                  rightLink={cardLinks[i].right?.link}
+                  leftLinkState={cardLinks[i].left.state}
+                  rightLinkState={cardLinks[i].right?.state}
+                />
+              )}
             </div>
-          </div>
-        </div>
+          </motion.div>
+        ))}
       </div>
-      <div className="frontpage-card border-x-8">
-        <div
-          className="h-full"
-          style={solarEnergyBg}
-          onMouseEnter={() => setSolarHover(true)}
-          onMouseLeave={() => setSolarHover(false)}
-        >
-          <div className="flex flex-col h-full justify-between">
-            <span className="text-center text-white text-4xl font-medium drop-shadow-md mt-28">
-              Solar Energy
-            </span>
-            <div className={`mb-28 ${solarHover ? "fadeIn" : "hidden"}`}>
-              <NavPill
-                text={
-                  "Descoperă soluții eco-friendly și economice pentru energie solară - panouri solare de înaltă calitate, instalate de profesioniști experimentați."
-                }
-                leftLinkText={"Civile"}
-                rightLinkText={"Industriale"}
-                leftLink={"civile"}
-                rightLink={"industriale"}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="frontpage-card">
-        <div
-          className="h-full"
-          style={marinServicesBg}
-          onMouseEnter={() => setMarineHover(true)}
-          onMouseLeave={() => setMarineHover(false)}
-        >
-          <div className="flex flex-col h-full justify-between">
-            <span className="text-center text-white text-4xl font-medium drop-shadow-md mt-28">
-              Marine Services
-            </span>
-            <div className={`mb-28 ${marineHover ? "fadeIn" : "hidden"}`}>
-              <NavPill
-                text={
-                  "Servicii maritime de încredere: reparatii, mentenanta si consultanta pentru ambarcatiuni, asigurând navigare sigură și eficientă pe tot parcursul."
-                }
-                leftLinkText={"Civile"}
-                rightLinkText={"Industriale"}
-                leftLink={"civile"}
-                rightLink={"industriale"}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 

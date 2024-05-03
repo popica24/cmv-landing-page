@@ -3,8 +3,12 @@ import "./index.css";
 import Worker from "./Components/Worker";
 import CivilBuildings from "./Components/CivilBuildings";
 import IndustrialBulding from "./Components/IndustrialBulding";
+import { useLocation } from "react-router-dom";
 const Civil = () => {
-  const [civil, setCivil] = useState(true);
+  const location = useLocation();
+  const leftState = location.state?.leftLinkState;
+
+  const [civil, setCivil] = useState(leftState || false);
   document.title = "CMV Electrical Solutions | Civil & Industrial";
   return (
     <>

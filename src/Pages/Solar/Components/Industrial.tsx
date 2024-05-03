@@ -180,14 +180,14 @@ const Industrial = () => {
             <p className="tracking-tight lg:max-w-[50ch]">
               Echipa noastră de experți în energie solară vă stă la dispoziție
               pentru a vă ghida prin procesul de selectare, proiectare și
-              instalare a sistemului de panouri solare care să se potrivească
-              perfect nevoilor și obiectivelor dumneavoastră.
+              instalare a sistemului de panouri fotovoltaice care să se
+              potrivească perfect nevoilor și obiectivelor dumneavoastră.
             </p>
             <p className="tracking-tight lg:max-w-[50ch]">
-              În plus față de instalarea panourilor solare, oferim și soluții
-              electrice complete pentru energie verde, inclusiv sisteme de
-              stocare a energiei, încărcătoare pentru vehicule electrice și alte
-              tehnologii inovatoare.
+              În plus față de instalarea panourilor fotovoltaice, oferim și
+              soluții electrice complete pentru energie verde, inclusiv sisteme
+              de stocare a energiei, încărcătoare pentru vehicule electrice și
+              alte tehnologii inovatoare.
             </p>
             <p className="tracking-tight lg:max-w-[50ch]">
               Împreună, putem construi un viitor mai curat și mai sustenabil
@@ -223,7 +223,7 @@ const Industrial = () => {
               >
                 <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                 <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                  Panouri solare
+                  Panouri fotovoltaice
                 </span>
               </div>
             </div>
@@ -246,11 +246,12 @@ const Industrial = () => {
           </span>
           <span className="w-full border-[3px] border-[#6EA73C] mt-4 mb-8 max-w-[900px]"></span>
           <span className="text-white max-w-[80ch] xl:max-w-none z-10">
-            Suntem mândri să oferim servicii de construcții de cea mai înaltă
-            calitate, construind nu doar case și apartamente, ci și relații de
-            lungă durată cu clienții noștri. Contactați-ne pentru a <br />{" "}
-            discuta despre cum putem transforma visul dumneavoastră în
-            realitate!
+            Suntem mândri să oferim servicii de instalare a panourilor solare de
+            cea mai înaltă calitate, construind nu doar sisteme de energie
+            regenerabilă, ci și relații de lungă durată cu clienții noștri.
+            <br />
+            Contactați-ne pentru a discuta despre cum putem transforma visul
+            dumneavoastră în realitate!
           </span>
         </div>
         <div className="grid lg:grid-cols-4 grid-cols-2 place-items-center container mx-auto lg:px-24 p-4 ">

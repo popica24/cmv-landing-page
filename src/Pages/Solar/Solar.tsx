@@ -2,14 +2,17 @@ import { useState } from "react";
 import Bulb from "./Components/Bulb";
 import Personal from "./Components/Personal";
 import Industrial from "./Components/Industrial";
+import { useLocation } from "react-router-dom";
 
 const Solar = () => {
-  const [personal, setPersonal] = useState(true);
+  const location = useLocation();
+  const leftState = location.state?.leftLinkState;
+
+  const [personal, setPersonal] = useState(leftState || false);
   document.title = "CMV Electrical Solutions | Solar Energy";
 
   return (
     <>
-      {" "}
       <div className="mt-12 lg:mt-48">
         <div className="flex flex-col items-center justify-center font-roboto w-full">
           <div className="relative">
