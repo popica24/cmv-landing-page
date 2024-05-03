@@ -7,25 +7,28 @@ const ContactForm = () => {
   const [color, setColor] = useState("");
   useEffect(() => {
     switch (location.pathname) {
-      case "/civil":
-        setColor("#F26100");
+      case "/civil-and-industrial":
+        setColor("#2F4858");
         break;
-      case "/solar":
-        setColor("#6EA73C");
+      case "/solar-energy":
+        setColor("#487288");
+        break;
+      case "/marine-services":
+        setColor("#ECA72C");
         break;
       default:
-        setColor("#487288");
+        setColor("#2F4858");
     }
   }, [location.pathname]);
   const [selectedType, setSelectedType] = useState(1);
   const border = `border-[${color}]`;
   const bg = `bg-[${color}]`;
   return (
-    <div className="container mx-auto px-2 py-6 lg:pt-24">
+    <div className=" md:container mx-auto md:px-2 py-6 lg:pt-24">
       <div className="grid col-span-1 xl:grid-cols-2">
         <div className="col-span-1 text-center place-content-center">
           <form action="" className="h-full">
-            <div className="flex flex-col items-center justify-between h-full">
+            <div className="flex flex-col items-center justify-between h-full max-w-[90vmin] mx-auto md:max-w-none">
               <span className="font-roboto text-xl tracking-tighter">
                 Intră în legătură cu noi
               </span>
@@ -119,7 +122,7 @@ const ContactForm = () => {
         <div className="col-span-1 hidden xl:block">
           <div className="flex items-center justify-center w-full">
             <img
-              src="form-picture.jpeg"
+              src="form-picture.avif"
               alt="Contact us !"
               className="max-w-[600px] h-auto"
             />

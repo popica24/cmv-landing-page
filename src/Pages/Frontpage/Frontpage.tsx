@@ -2,6 +2,8 @@ import { CSSProperties, useState } from "react";
 import NavPill from "./components/NavPill";
 
 const Frontpage = () => {
+  document.title = "CMV Electrical Solutions | Acasa";
+
   const [civilHover, setCivilHover] = useState(false);
   const [solarHover, setSolarHover] = useState(false);
   const [marineHover, setMarineHover] = useState(false);
@@ -45,7 +47,7 @@ const Frontpage = () => {
                 }
                 leftLinkText={"Civile"}
                 rightLinkText={"Industriale"}
-                leftLink={"civile"}
+                leftLink={"civil-and-industrial"}
                 rightLink={"industriale"}
               />
             </div>

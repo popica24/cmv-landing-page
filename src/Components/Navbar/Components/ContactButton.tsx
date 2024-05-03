@@ -1,6 +1,29 @@
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
 const ContactButton = () => {
+  const location = useLocation();
+
+  const [bg, setBg] = useState("");
+  useEffect(() => {
+    switch (location.pathname) {
+      case "/civil-and-industrial":
+        setBg("bg-[#2F4858]");
+        break;
+      case "/solar-energy":
+        setBg("bg-[#487288]");
+        break;
+      case "/marine-services":
+        setBg("bg-[#ECA72C]");
+        break;
+      default:
+        setBg("bg-[#2F4858]");
+    }
+  }, [location.pathname]);
   return (
-    <button className="inline-flex items-center whitespace-nowrap justify-center bg-[#F26100] rounded-[8px] md:rounded-[24px] px-[5px] md:px-[10px] text-xs md:text-sm py-[2px] md:py-[6px] text-white">
+    <button
+      className={`inline-flex items-center whitespace-nowrap justify-center rounded-[8px] md:rounded-[24px] px-[5px] md:px-[10px] text-xs md:text-sm py-[2px] md:py-[6px] text-white ${bg}`}
+    >
       <svg
         className="w-[12px] md:w-[14px] me-1"
         viewBox="0 0 23 15"

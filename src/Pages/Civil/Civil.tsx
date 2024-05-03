@@ -5,6 +5,7 @@ import CivilBuildings from "./Components/CivilBuildings";
 import IndustrialBulding from "./Components/IndustrialBulding";
 const Civil = () => {
   const [civil, setCivil] = useState(true);
+  document.title = "CMV Electrical Solutions | Civil & Industrial";
   return (
     <>
       <div className="mt-12 lg:mt-48">

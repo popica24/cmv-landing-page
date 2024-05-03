@@ -15,19 +15,24 @@ const Footer = () => {
   const [bg, setBg] = useState("");
   useEffect(() => {
     switch (location.pathname) {
-      case "/civil":
+      case "/civil-and-industrial":
         setBg("bg-[#2F4858]");
         setColor("#F26100");
         break;
-      case "/solar":
+      case "/solar-energy":
         setBg("bg-[#487288]");
         setColor("#6EA73C");
+        break;
+      case "/marine-services":
+        setColor("#ECA72C");
+        setBg("bg-[#487288]");
         break;
       default:
         setBg("bg-[#2F4858]");
         setColor("#487288");
     }
   }, [location.pathname]);
+  const textColor = `text-[${color}]`;
   return (
     <div className={`py-8 lg:px-44 lg:py-12 ${bg}`}>
       <div className="flex flex-col md:flex-row items-center justify-evenly">
@@ -129,10 +134,10 @@ const Footer = () => {
           OrangeText="Telefonul nostru"
         />
       </div>
-      <span className="text-white flex items-center justify-center text-sm lg:text-[17.5px] pt-12 flex-col">
+      <span className="text-white text-center flex items-center justify-center text-sm lg:text-[17.5px] pt-12 flex-col">
         © 2024 CMV ELECTRIC SOLUTION. Toate drepturile rezervate.
-        <p className="text-[#005FB7]"> Politica de Confidențialitate </p>
-        <p className="text-[#005FB7]">Termeni și Condiții</p>
+        <p className={textColor}> Politica de Confidențialitate </p>
+        <p className={textColor}>Termeni și Condiții</p>
       </span>
     </div>
   );

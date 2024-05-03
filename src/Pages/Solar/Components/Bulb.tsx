@@ -1,10 +1,12 @@
 const Bulb = () => {
   return (
-    <div className="relative xl:w-[410px] xl:h-[570px] lg:w-[250px] lg:h-[347.56px] rounded-t-[100px]">
+    <div className="bg-[#6EA73C] relative xl:w-[380px] xl:h-[475px] lg:w-[250px] lg:h-[347.56px] rounded-t-[100px]">
       <img
         src="bulb.png"
         alt=""
-        className="absolute transform xl:scale-[80%] lg:scale-[70%] bottom-[30.5px] lg:bottom-0 -right-15 rotate-45"
+        className="absolute xl:scale-[83%] -top-[1.25rem] -right-8 rotate-[38deg]"
+        width={449}
+        height={557}
       />
     </div>
   );

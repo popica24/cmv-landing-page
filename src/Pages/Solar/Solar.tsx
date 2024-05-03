@@ -5,6 +5,7 @@ import Industrial from "./Components/Industrial";
 
 const Solar = () => {
   const [personal, setPersonal] = useState(true);
+  document.title = "CMV Electrical Solutions | Solar Energy";
 
   return (
     <>
@@ -27,10 +28,10 @@ const Solar = () => {
           <article className="bg-[#487288] w-full flex items-center justify-center flex-col mt-4 pt-4 relative ">
             <div className="max-w-[38ch] sm:max-w-[55ch] lg:max-w-[77ch] flex flex-col md:items-start items-center ms-0 lg:ms-[18rem] xl:ms-[29.6rem]">
               <span className="text-white lg:text-[1.125rem] leading-5 font-normal text-xs md:text-base">
-                Ne axăm nu doar pe construirea structurilor, ci și pe
-                consolidarea legăturilor durabile. Fiecare proiect este mai mult
-                decât o instalare, este o investiție în parteneriate de lungă
-                durată pentru un viitor alimentat de energia solară.
+                Descoperind noua realitate a viitorului: O lume în care energia
+                soarelui ne conduce drumul, într-o călătorie plină de lumină și
+                posibilități, o alternativă inovatoare și mult mai
+                convingătoare.
               </span>
               <button className="my-6 rounded-[164px] border-2 border-[#6EA73C] text-white py-2 px-6 inline-flex items-center w-full justify-center lg:w-fit">
                 Despre noi

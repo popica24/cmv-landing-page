@@ -14,7 +14,7 @@ const NavPill = (props: Props) => {
       <span className="text-center">{props.text}</span>
       <div className="flex flex-row items-center pt-2">
         <Link
-          to={"civil"}
+          to={"civil-and-industrial"}
           className="me-4 rounded-[30px] bg-[#FF6600] w-[150px] py-1 text-center text-black"
         >
           {props.leftLinkText}

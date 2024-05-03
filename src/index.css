@@ -25,19 +25,24 @@
 .text-linear-gradient {
   background: linear-gradient(to right, #200ddf, #ff6600);
   -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
   color: transparent;
 }
 .text-linear-gradient-green {
   background: linear-gradient(to right, #487288, #6ea73c);
   -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
+  color: transparent;
+}
+.text-linear-gradient-yellow {
+  background: linear-gradient(to right, #eca72c, #487288);
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
   color: transparent;
 }
 .bg-linear-contact:hover {
   opacity: 1;
   animation: fadeInLinear 1s linear forwards;
-}
-.dotted-border {
-  border-image: url("/public/civil-border.svg");
 }
 @keyframes fadeInLinear {
   from {

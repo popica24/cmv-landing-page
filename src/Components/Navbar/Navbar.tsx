@@ -14,11 +14,11 @@ const Navbar = () => {
       </Link>
       <MobileMenu />
       <div className="sm:flex hidden flex-row items-center">
-        <LinkButton text="Civil and Industrial" link="/civil" />
+        <LinkButton text="Civil and Industrial" link="/civil-and-industrial" />
         <div className="mx-0 md:mx-2 lg:mx-6 flex items-center">
-          <LinkButton text="Solar energy" link="/solar" />
+          <LinkButton text="Solar energy" link="/solar-energy" />
         </div>
-        <LinkButton text="Marine Services" link="/marine" />
+        <LinkButton text="Marine Services" link="/marine-services" />
       </div>
       <div className="sm:flex flex-row items-center hidden ">
         <svg

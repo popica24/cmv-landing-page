@@ -20,7 +20,7 @@ const CivilBuildings = () => {
         <div className="flex flex-col-reverse lg:flex-row items-center justify-center my-6 w-full p-4">
           <div
             data-aos="flip-left"
-            style={{ backgroundImage: "url(civil.jpeg)" }}
+            style={{ backgroundImage: "url(civil.avif)" }}
             className="rounded-tl-[30px] rounded-br-[30px] mt-6 lg:mt-0 w-full h-[200px] lg:w-[450px] lg:h-[260px] me-4 bg-cover bg-center"
           />
 
@@ -120,7 +120,7 @@ const CivilBuildings = () => {
               <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full">
                 <div
                   className="h-[150px] mx-auto w-[90vmin] sm:w-[75vw] lg:w-full bg-cover bg-center aspect-[16/9] rounded-[10px] relative mb-4 lg:mb-0 lg:me-2"
-                  style={{ backgroundImage: "url(smart-lighting.jpeg)" }}
+                  style={{ backgroundImage: "url(smart-lighting.avif)" }}
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                   <span className="text-white absolute top-6 left-6 text-xl font-roboto">
@@ -129,7 +129,7 @@ const CivilBuildings = () => {
                 </div>
                 <div
                   className="h-[150px] w-[90vmin] sm:w-[75vw] lg:w-full mx-auto bg-cover bg-center aspect-[16/9] rounded-[10px] relative lg:ms-2"
-                  style={{ backgroundImage: "url(smart-climate.jpeg)" }}
+                  style={{ backgroundImage: "url(smart-climate.avif)" }}
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                   <span className="text-white absolute top-6 left-6 text-xl font-roboto">
@@ -139,7 +139,7 @@ const CivilBuildings = () => {
               </div>
               <div
                 className="h-[150px] w-[90vmin] sm:w-[75vw] lg:w-full mx-auto bg-cover bg-center rounded-[10px] mt-4 relative"
-                style={{ backgroundImage: "url(advanced-security.jpeg)" }}
+                style={{ backgroundImage: "url(advanced-security.avif)" }}
               >
                 <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                 <span className="text-white absolute top-6 left-6 text-xl font-roboto">

@@ -9,11 +9,14 @@ const LinkButton = (props: Props) => {
   const [bg, setBg] = useState("");
   useEffect(() => {
     switch (location.pathname) {
-      case "/civil":
+      case "/civil-and-industrial":
         setBg("bg-[#2F4858]");
         break;
-      case "/solar":
+      case "/solar-energy":
         setBg("bg-[#487288]");
+        break;
+      case "/marine-services":
+        setBg("bg-[#ECA72C]");
         break;
       default:
         setBg("bg-[#2F4858]");
