@@ -1,7 +1,7 @@
 import { useState } from "react";
-import civilIndustrial from "../../../public/civil-industrial.jpg";
-import solarEnergy from "../../../public/solar-energy.jpg";
-import marinServices from "../../../public/marin-services.jpg";
+import civilIndustrial from "../../../public/civil-industrial.avif";
+import solarEnergy from "../../../public/solar-energy.avif";
+import marinServices from "../../../public/marin-services.avif";
 import { motion } from "framer-motion";
 import NavPill from "./components/NavPill";
 const Frontpage = () => {
@@ -64,7 +64,8 @@ const Frontpage = () => {
   const cardImages = [civilIndustrial, solarEnergy, marinServices];
   return (
     <>
-      <div className="flex flex-col h-screen md:flex-row justify-center items-center">
+      <div className="flex flex-col h-screen lg:flex-row justify-center items-center overflow-hidden relative">
+        <div className="absolute top-5 left-5"></div>
         {[0, 1, 2].map((i) => (
           <motion.div
             key={i}
@@ -80,8 +81,8 @@ const Frontpage = () => {
               backgroundImage: `url(${cardImages[i]})`,
             }}
           >
-            <div className="flex flex-col items-center justify-between h-full pb-24 pt-32">
-              <span className=" md:text-4xl text-white font-medium">
+            <div className="flex flex-col items-center justify-between h-full pt-3 md:pt-12 lg:pt-32 relative overflow-hidden">
+              <span className=" md:text-4xl text-white font-medium text-center">
                 {cardLinks[i].title}
               </span>
               {expandedIndex == i && (
