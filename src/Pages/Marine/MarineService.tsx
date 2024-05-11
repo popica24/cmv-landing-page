@@ -139,7 +139,7 @@ const MarineService = () => {
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                   <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                    Modernizare
+                    Dry Dock
                   </span>
                 </div>
               </div>

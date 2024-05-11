@@ -246,12 +246,11 @@ const Industrial = () => {
           </span>
           <span className="w-full border-[3px] border-[#6EA73C] mt-4 mb-8 max-w-[900px]"></span>
           <span className="text-white max-w-[80ch] xl:max-w-none z-10">
-            Suntem mândri să oferim servicii de instalare a panourilor solare de
-            cea mai înaltă calitate, construind nu doar sisteme de energie
-            regenerabilă, ci și relații de lungă durată cu clienții noștri.
-            <br />
-            Contactați-ne pentru a discuta despre cum putem transforma visul
-            dumneavoastră în realitate!
+            Ne dedicăm nu doar construirii sistemelor de energie regenerabilă,
+            ci și dezvoltării relațiilor de lungă durată cu partenerii noștri
+            din industria construcțiilor. <br /> Contactați-ne pentru a discuta
+            despre cum putem transforma viziunea dumneavoastră în realitate și
+            pentru a începe să construim un viitor mai sustenabil împreună!
           </span>
         </div>
         <div className="grid lg:grid-cols-4 grid-cols-2 place-items-center container mx-auto lg:px-24 p-4 ">

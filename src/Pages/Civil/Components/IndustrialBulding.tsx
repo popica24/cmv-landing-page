@@ -26,16 +26,16 @@ const IndustrialBulding = () => {
 
           <div className="lg:ms-4" data-aos="fade-right">
             <span className="font-semibold  lg:text-lg xl:text-[25px]">
-              Infrastructură industrială
+              Inovatie si durabilitate in industria moderna
             </span>
             <div className="py-0.5 my-2 xl:my-4 bg-[#F26100] w-full max-w-[500px]"></div>
             <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
-              Suntem specializați în construcții industriale și în
-              infrastructura destinată unor domenii critice precum centrele de
-              date, centrele farmaceutice, energia regenerabilă și facilitățile
-              de sănătate și educație. Cu o experiență vastă și o abordare
-              orientată către rezultate, suntem alegerea ideală pentru
-              proiectele dvs. complexe și specializate.
+              Suntem lideri în industria furnizării de soluții complete și
+              personalizate în domeniile energiei verzi, centrelor de date și
+              centrelor farmaceutice. La [Numele Companiei], ne străduim să
+              aducem beneficiile tehnologiilor inovatoare și sustenabile în
+              afacerile dumneavoastră, oferindu-vă soluții avansate și fiabile,
+              adaptate cerințelor specifice ale fiecărui sector.
             </p>
             <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
               Echipa noastră de ingineri și specialiști în construcții
@@ -69,7 +69,7 @@ const IndustrialBulding = () => {
           data-aos-delay="400"
           data-aos-duration="500"
         >
-          <ServiceCards text="Energie regenerabilă" imagePath="Energy.svg" />
+          <ServiceCards text="Infrastructura" imagePath="Energy.svg" />
         </div>
         <div
           className="col-span-1"
@@ -88,31 +88,30 @@ const IndustrialBulding = () => {
         <span className="text-[#F26100] font-semibold slide-from-bottom">
           Servici
         </span>
-        <span className="font-bold text-[20px] fadeIn">
-          Industriale / Energie verde
-        </span>
+        <span className="font-bold text-[20px] fadeIn">Industriale</span>
         <div className="flex flex-col items-center justify-center lg:grid grid-cols-5 my-6">
           <div
             className="col-span-2 max-w-[89vmin] md:px-6 md:max-w-none mb-4 lg:mb-0"
             data-aos="fade-right"
           >
             <span className="text-xl font-medium">
-              Transformăm Afacerile cu Soluții Verzi
+              Construim Fundamentul pentru Viitorul Afacerilor
             </span>
             <div className="w-full border-2 border-[#F26100] mt-2 mb-4"></div>
             <p className="tracking-tight lg:max-w-[50ch]">
               Suntem lideri în industria furnizării de soluții complete și
-              personalizate în domeniile energiei verzi, centrelor de date și
-              centrelor farmaceutice. La [Numele Companiei], ne străduim să
-              aducem beneficiile tehnologiilor inovatoare și sustenabile în
-              afacerile dumneavoastră, oferindu-vă soluții avansate și fiabile,
-              adaptate cerințelor specifice ale fiecărui sector.
+              personalizate în domeniul construcțiilor industriale,
+              infrastructurii și a tehnologiilor avansate. Ne străduim să aducem
+              beneficiile inovației și calității în afacerile dumneavoastră,
+              oferindu-vă soluții fiabile și adaptate cerințelor specifice ale
+              fiecărui proiect.
             </p>
             <p className="tracking-tight lg:max-w-[50ch]">
-              Cu o echipă dedicată de specialiști în domeniile energiei solare,
-              a infrastructurii IT și a industriei farmaceutice, suntem alegerea
-              ideală pentru companiile care își doresc să investească într-un
-              viitor mai verde și mai eficient.
+              Cu o echipă dedicată de specialiști în domeniul construcțiilor
+              industriale, a infrastructurii IT, inginerie civilă și tehnologii
+              de vârf, suntem alegerea ideală pentru companiile care își doresc
+              să investească în infrastructuri solide și durabile, adaptate
+              nevoilor actuale și viitoare ale industriei.
             </p>
           </div>
           <div className="col-span-3 lg:ps-6" data-aos="fade-left">
@@ -129,21 +128,21 @@ const IndustrialBulding = () => {
                 </div>
                 <div
                   className="h-[150px] w-[90vmin] sm:w-[75vw] lg:w-full mx-auto bg-cover bg-center aspect-[16/9] rounded-[10px] relative lg:ms-2"
-                  style={{ backgroundImage: "url(electrical-solutions.avif)" }}
+                  style={{ backgroundImage: "url(infrastructure.jpg)" }}
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                   <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                    Solutii electrice
+                    Infrastructura
                   </span>
                 </div>
               </div>
               <div
                 className="h-[150px] w-[90vmin] sm:w-[75vw] lg:w-full mx-auto bg-cover bg-center rounded-[10px] mt-4 relative"
-                style={{ backgroundImage: "url(solar-panels-industrial.avif)" }}
+                style={{ backgroundImage: "url(pharma.jpg)" }}
               >
                 <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                 <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                  Panouri solare
+                  Centre Farmaceutice
                 </span>
               </div>
             </div>
@@ -162,10 +161,13 @@ const IndustrialBulding = () => {
           </span>
           <span className="w-full border-[3px] border-[#F26100] mt-4 mb-8 max-w-[900px]"></span>
           <span className="text-white max-w-[80ch] xl:max-w-none">
-            Suntem mândri să oferim servicii de construcții de cea mai înaltă
-            calitate, construind nu doar case și apartamente, ci și relații de
-            lungă durată cu clienții noștri. Contactați-ne pentru a <br />{" "}
-            discuta despre cum putem transforma visul dumneavoastră în
+            Suntem mândri să oferim servicii de construcții industriale de cea
+            mai înaltă calitate, construind nu doar structuri solide și
+            eficiente, ci și relații de lungă durată cu clienții noștri.
+            <br />
+            Contactați-ne pentru a discuta despre cum putem transforma proiectul
+            dumneavoastră în realitate și pentru a vă oferi soluțiile perfect
+            adaptate nevoilor și obiectivelor dumneavoastră industriale în
             realitate!
           </span>
         </div>

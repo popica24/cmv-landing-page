@@ -175,21 +175,15 @@ const Personal = () => {
               <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full">
                 <div
                   className="h-[150px] mx-auto w-[90vmin] sm:w-[75vw] lg:w-full bg-cover bg-center aspect-[16/9] rounded-[10px] relative mb-4 lg:mb-0 lg:me-2"
-                  style={{ backgroundImage: "url(smart-lighting.avif)" }}
+                  style={{ backgroundImage: "url(inverter.avif)" }}
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
-                  <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                    Iluminat Smart
-                  </span>
                 </div>
                 <div
                   className="h-[150px] w-[90vmin] sm:w-[75vw] lg:w-full mx-auto bg-cover bg-center aspect-[16/9] rounded-[10px] relative lg:ms-2"
-                  style={{ backgroundImage: "url(smart-climate.avif)" }}
+                  style={{ backgroundImage: "url(solar-house.jpg)" }}
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
-                  <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                    Climatizare Inteligentă
-                  </span>
                 </div>
               </div>
               <div
@@ -221,9 +215,10 @@ const Personal = () => {
           </span>
           <span className="w-full border-[3px] border-[#6EA73C] mt-4 mb-8 max-w-[900px]"></span>
           <span className="text-white max-w-[80ch] xl:max-w-none">
-            Suntem mândri să oferim servicii de instalare a panourilor solare de
-            cea mai înaltă calitate, construind nu doar sisteme de energie
-            regenerabilă, ci și relații de lungă durată cu clienții noștri.
+            Suntem mândri să oferim servicii de instalare a panourilor
+            fotovoltaice de cea mai înaltă calitate, construind nu doar sisteme
+            de energie regenerabilă, ci și relații de lungă durată cu clienții
+            noștri.
             <br />
             Contactați-ne pentru a discuta despre cum putem transforma visul
             dumneavoastră în realitate!
