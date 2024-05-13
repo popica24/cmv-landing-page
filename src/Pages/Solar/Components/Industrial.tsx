@@ -1,6 +1,5 @@
 import CountUp from "react-countup";
 import RecommendCards from "../../../Components/RecommendCards";
-import ContactForm from "../../../Components/ContactForm.1";
 
 const Industrial = () => {
   return (
