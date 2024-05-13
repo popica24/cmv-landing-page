@@ -4,6 +4,7 @@ import Layout from "../Layout/Layout";
 import Solar from "../Pages/Solar/Solar";
 import Marine from "../Pages/Marine/Marine";
 import Configurator from "../Pages/Configurator/Configurator";
+import { ConfiguratorProvider } from "../Context/ConfiguratorContext";
 
 export const router = createBrowserRouter([
   {
@@ -17,7 +18,14 @@ export const router = createBrowserRouter([
     children: [
       { path: "solar-energy", element: <Solar /> },
       { path: "marine-services", element: <Marine /> },
-      { path: "configurator", element: <Configurator /> },
+      {
+        path: "configurator",
+        element: (
+          <ConfiguratorProvider>
+            <Configurator />
+          </ConfiguratorProvider>
+        ),
+      },
     ],
   },
 ]);

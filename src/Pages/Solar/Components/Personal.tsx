@@ -1,7 +1,7 @@
 import CountUp from "react-countup";
 import RecommendCards from "../../../Components/RecommendCards";
 import { useEffect } from "react";
-import ContactForm from "../../../Components/ContactForm";
+import ContactForm from "../../../Components/ContactForm.1";
 
 const Personal = () => {
   useEffect(() => {
@@ -289,8 +289,6 @@ const Personal = () => {
           </div>
         </div>
       </div>
-      {/*Contact Form*/}
-      <ContactForm />
     </>
   );
 };

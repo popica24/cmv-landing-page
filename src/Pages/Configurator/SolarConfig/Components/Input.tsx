@@ -3,14 +3,19 @@ type Props = {
   placeholder: string;
   label: string;
   className?: string;
+  onChange: React.Dispatch<React.SetStateAction<any>>;
 };
 
 const Input = (props: Props) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    props.onChange(e.target.value);
+  };
   return (
     <div
       className={`relative h-11 w-full min-w-[200px] my-2 xl:my-0 ${props.className}`}
     >
       <input
+        onChange={(e) => handleChange(e)}
         type={props.type}
         required
         placeholder={props.placeholder}

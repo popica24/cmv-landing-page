@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const location = useLocation();
@@ -23,11 +24,23 @@ const ContactForm = () => {
   const [selectedType, setSelectedType] = useState(1);
   const border = `border-[${color}]`;
   const bg = `bg-[${color}]`;
+  const form = useRef<any>();
+  function handleSubmit(e: FormEvent<HTMLFormElement>): void {
+    e.preventDefault();
+    emailjs.sendForm("service_qwxrzdm", "template_ct5k6zu", form.current, {
+      publicKey: "FL_lzrGz2_DG9O931",
+    });
+  }
   return (
     <div className=" md:container mx-auto md:px-2 py-6 lg:pt-24" id="contact">
       <div className="grid col-span-1 xl:grid-cols-2">
         <div className="col-span-1 text-center place-content-center">
-          <form action="" className="h-full">
+          <form
+            action=""
+            className="h-full"
+            ref={form}
+            onSubmit={(e) => handleSubmit(e)}
+          >
             <div className="flex flex-col items-center justify-between h-full max-w-[90vmin] mx-auto md:max-w-none">
               <span className="font-roboto text-xl tracking-tighter">
                 Intră în legătură cu noi
@@ -35,7 +48,7 @@ const ContactForm = () => {
               <input
                 type="radio"
                 id="persoana_fizica"
-                name="person_type"
+                name="from_person_type"
                 value="Persoana fizică"
                 checked
                 hidden
@@ -43,7 +56,7 @@ const ContactForm = () => {
               <input
                 type="radio"
                 id="persoana_juridica"
-                name="person_type"
+                name="from_person_type"
                 value="Persoana Juridica"
                 hidden
               />
@@ -75,7 +88,7 @@ const ContactForm = () => {
                     minLength={3}
                     maxLength={36}
                     type="text"
-                    name="name"
+                    name="from_name"
                     id="name"
                     className="border border-[#2F4858] rounded-[5px] px-4 py-2 w-full sm:me-[6px]"
                   />
@@ -86,7 +99,7 @@ const ContactForm = () => {
                     minLength={3}
                     maxLength={36}
                     type="text"
-                    name="name"
+                    name="from_name"
                     id="name"
                     className="border border-[#2F4858] rounded-[5px] px-4 py-2 w-full sm:me-[6px]"
                   />
@@ -97,7 +110,7 @@ const ContactForm = () => {
                   minLength={3}
                   maxLength={36}
                   type="email"
-                  name="email"
+                  name="from_email"
                   id="email"
                   className="border border-[#2F4858] rounded-[5px] px-4 py-2 w-full sm:ms-[6px] mt-6 sm:mt-0"
                 />
@@ -106,19 +119,20 @@ const ContactForm = () => {
                 <input
                   placeholder="Telefon"
                   required
-                  name="phone"
+                  name="from_phone"
                   id="phone"
                   type="tel"
                   className="border border-[#2F4858] rounded-[5px] px-4 py-2 w-full sm:me-[6px]"
                 />
                 <input
+                  name="from_address"
                   placeholder="Adresă (opțional)"
                   type="text"
                   className="border border-[#2F4858] rounded-[5px] px-4 py-2 w-full sm:ms-[6px] mt-6 sm:mt-0"
                 />
               </div>
               <textarea
-                name="message"
+                name="from_message"
                 id="message"
                 placeholder="Mesaj"
                 className="max-h-[150px] min-h-[150px] sm:w-[90%] w-full mt-6 border border-[#2F4858] rounded-[5px] px-4 py-2"

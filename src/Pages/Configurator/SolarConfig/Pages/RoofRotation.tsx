@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NextStep from "../Components/NextStep";
 import Headline from "../Components/Headline";
+import { useConfigurator } from "../../../../Context/ConfiguratorContext";
 
 type Props = {
   nextStep: () => void;
@@ -10,6 +11,26 @@ type Props = {
 const RoofRotation = (props: Props) => {
   const [rotation, setRotation] = useState("rotate-[180deg]");
   const [pointRotation, setPointRotation] = useState("rotate-[-90deg]");
+  const { setRoofOrientation } = useConfigurator();
+  useEffect(() => {
+    switch (pointRotation) {
+      case "rotate-[0deg]":
+        setRoofOrientation("Vest");
+        break;
+      case "rotate-[-45deg]":
+        setRoofOrientation("Sud-Vest");
+        break;
+      case "rotate-[-180deg]":
+        setRoofOrientation("Est");
+        break;
+      case "rotate-[-136deg]":
+        setRoofOrientation("Sud-Est");
+        break;
+      case "rotate-[-90deg]":
+        setRoofOrientation("Sud");
+        break;
+    }
+  }, [pointRotation]);
   return (
     <div
       className="flex flex-col md:flex-row justify-center  mx-auto max-w-[90vmin] xl:max-w-[1150px] px-[5vw] py-[5vh] rounded-[30px] bg-white"

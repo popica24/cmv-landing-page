@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NextStep from "../Components/NextStep";
 import Headline from "../Components/Headline";
+import { useConfigurator } from "../../../../Context/ConfiguratorContext";
 
 type Props = {
   nextStep: () => void;
@@ -9,7 +10,21 @@ type Props = {
 };
 
 function RoofTypes(props: Props) {
-  const [roofType, setRoofType] = useState(1);
+  const [roofType, setRoofTypeState] = useState(1);
+  const { setRoofType } = useConfigurator();
+  useEffect(() => {
+    switch (roofType) {
+      case 1:
+        setRoofType("Acoperis inclinat");
+        break;
+      case 2:
+        setRoofType("Acoperis drept");
+        break;
+      case 3:
+        setRoofType("Pe sol");
+        break;
+    }
+  }, [roofType]);
 
   const handleNextStep = () => {
     if (roofType == 1) {
@@ -32,7 +47,7 @@ function RoofTypes(props: Props) {
         <div className="flex flex-col md:flex-row justify-evenly items-center w-full">
           <div className="flex flex-col items-center justify-center">
             <div
-              onClick={() => setRoofType(1)}
+              onClick={() => setRoofTypeState(1)}
               className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
                 roofType == 1
                   ? "border-[#487288]"
@@ -50,7 +65,7 @@ function RoofTypes(props: Props) {
           </div>
           <div className="flex flex-col items-center justify-center">
             <div
-              onClick={() => setRoofType(2)}
+              onClick={() => setRoofTypeState(2)}
               className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
                 roofType == 2
                   ? "border-[#487288]"
@@ -69,7 +84,7 @@ function RoofTypes(props: Props) {
           </div>
           <div className="flex flex-col items-center justify-center">
             <div
-              onClick={() => setRoofType(3)}
+              onClick={() => setRoofTypeState(3)}
               className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
                 roofType == 3
                   ? "border-[#487288]"

@@ -1,7 +1,8 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "../index.css";
 import NextStep from "../Components/NextStep";
 import Headline from "../Components/Headline";
+import { useConfigurator } from "../../../../Context/ConfiguratorContext";
 type Props = {
   nextStep: () => void;
 };
@@ -14,7 +15,21 @@ const Consumption = (props: Props) => {
   const PROPORTION = useMemo(() => MIN_ELECTRICITY / MIN_CONSUMPTION, []);
 
   const [sliderValue, setSliderValue] = useState<any>(MIN_ELECTRICITY);
-  console.log(sliderValue * 20);
+  const {
+    setMonthlyConsumption,
+    setYearlyConsumption,
+    setTrifasedSystem,
+    TrifasedSystem,
+  } = useConfigurator();
+
+  useEffect(() => {
+    const MonthlyConsumption = Math.floor(sliderValue / PROPORTION).toString();
+    const YearlyConsumption = (
+      Math.floor(sliderValue / PROPORTION) * 12
+    ).toString();
+    setMonthlyConsumption(MonthlyConsumption);
+    setYearlyConsumption(YearlyConsumption);
+  }, [sliderValue]);
 
   return (
     <div
@@ -96,6 +111,7 @@ const Consumption = (props: Props) => {
           <input
             type="checkbox"
             className="rounded-[50%] cursor-pointer w-[24px] h-[24px] xl:m-[7px]"
+            onChange={() => setTrifasedSystem(!TrifasedSystem)}
           />
           <label
             className="ms-2 font-medium"

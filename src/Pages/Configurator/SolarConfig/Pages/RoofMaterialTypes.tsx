@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NextStep from "../Components/NextStep";
 import Headline from "../Components/Headline";
+import { useConfigurator } from "../../../../Context/ConfiguratorContext";
 
 type Props = {
   nextStep: () => void;
@@ -9,6 +10,30 @@ type Props = {
 
 const RoofMaterialTypes = (props: Props) => {
   const [roofType, setRoofType] = useState(1);
+  const { setRoofMaterial } = useConfigurator();
+  useEffect(() => {
+    switch (roofType) {
+      case 1:
+        setRoofMaterial("Țiglă ceramica");
+        break;
+      case 2:
+        setRoofMaterial("Țiglă din beton");
+        break;
+      case 3:
+        setRoofMaterial("Tablă zincată");
+        break;
+      case 4:
+        setRoofMaterial("Şindrilă");
+        break;
+      case 5:
+        setRoofMaterial("Ardezie");
+        break;
+      case 6:
+        setRoofMaterial("Sandwich");
+        break;
+    }
+  }, [roofType]);
+
   return (
     <div
       className="flex flex-col md:flex-row justify-center  mx-auto max-w-[90vmin] xl:max-w-[1150px] px-[5vw] py-[5vh] rounded-[30px] bg-white"
