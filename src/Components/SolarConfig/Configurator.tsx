@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Consumption from "./Components/Consumption";
-import RoofTypes from "./Components/RoofTypes";
-import InstallPlace from "./Components/InstallPlace";
-import RoofMaterialTypes from "./Components/RoofMaterialTypes";
-import RoofRotation from "./Components/RoofRotation";
+import Consumption from "./Pages/Consumption";
+import RoofTypes from "./Pages/RoofTypes";
+import InstallPlace from "./Pages/InstallPlace";
+import RoofMaterialTypes from "./Pages/RoofMaterialTypes";
+import RoofRotation from "./Pages/RoofRotation";
 
 const Configurator = () => {
   const [step, setStep] = useState(1);
@@ -14,7 +14,7 @@ const Configurator = () => {
     setStep(step - 1);
   };
   const toForm = () => {
-    setStep(6);
+    setStep(5);
   };
   if (step == 1) return <Consumption nextStep={nextStep} />;
   if (step == 2)
@@ -32,9 +32,9 @@ const Configurator = () => {
     );
   }
   if (step == 4) {
-    return <RoofRotation />;
+    return <RoofRotation nextStep={nextStep} previousStep={previousStep} />;
   }
-  if (step == 6) {
+  if (step == 5) {
     return <InstallPlace nextStep={nextStep} previousStep={previousStep} />;
   }
 };

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import NextStep from "../Components/NextStep";
+import Headline from "../Components/Headline";
 
 type Props = {
   nextStep: () => void;
@@ -8,30 +10,19 @@ type Props = {
 
 function RoofTypes(props: Props) {
   const [roofType, setRoofType] = useState(1);
-  const handleNextStep = () => {
-    if (roofType == 1) {
-      return props.nextStep();
-    }
-    return props.toForm();
-  };
+
   return (
     <div
-      className="flex flex-row justify-center  mx-auto max-w-[1150px] px-[5vw] py-[5vh] rounded-[30px] bg-white"
+      className="flex flex-col md:flex-row justify-center  mx-auto max-w-[90vmin] xl:max-w-[1150px] px-[5vw] py-[5vh] rounded-[30px] bg-white"
       style={{ boxShadow: "0 3px 6px rgba(0, 0, 0, .161)" }}
     >
-      <div className="flex flex-col justify-between items-start w-full">
-        <div className="flex flex-row items-center justify-start mb-5">
-          <span className="uppercase bg-[#487288] rounded-[31px] text-[27px] py-2 px-5 font-extrabold text-white">
-            Pasul 2
-          </span>
-          <span className="uppercase text-[27px] py-2 px-5 font-extrabold text-gray-400">
-            ACOPERIȘUL TĂU
-          </span>
-        </div>
-        <span className="text-[20px] py-2 px-5 font-bold text-black mb-8">
+      <div className="flex flex-col justify-center md:justify-between items-center md:items-start w-full">
+        <Headline title="Pasul 2" subtitle="ACOPERIȘUL TĂU" />
+
+        <span className="text-[14px] md:text-[20px] py-2 px-5 font-bold text-black mb-8">
           Cum este acoperișul dumneavoastră?
         </span>
-        <div className="flex flex-row justify-evenly items-center w-full">
+        <div className="flex flex-col md:flex-row justify-evenly items-center w-full">
           <div className="flex flex-col items-center justify-center">
             <div
               onClick={() => setRoofType(1)}
@@ -87,12 +78,7 @@ function RoofTypes(props: Props) {
           >
             &#8249; Pasul anterior
           </span>
-          <button
-            className="bg-[#487288] rounded-[30px] text-white py-[12px] px-[20px] text-[1.3rem] font-bold"
-            onClick={handleNextStep}
-          >
-            Pasul urmator
-          </button>
+          <NextStep nextStep={props.nextStep} />
         </div>
       </div>
     </div>
