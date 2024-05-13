@@ -15,7 +15,7 @@ const Footer = () => {
   const [bg, setBg] = useState("");
   useEffect(() => {
     switch (location.pathname) {
-      case "/civil-and-industrial":
+      case "/":
         setBg("bg-[#2F4858]");
         setColor("#F26100");
         break;

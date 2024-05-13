@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import Frontpage from "../Pages/Frontpage/Frontpage";
 import Civil from "../Pages/Civil/Civil";
 import Layout from "../Layout/Layout";
 import Solar from "../Pages/Solar/Solar";
@@ -9,14 +8,13 @@ import Configurator from "../Pages/Configurator/Configurator";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Frontpage />,
-    index: true,
+    element: <Layout />,
+    children: [{ path: "/", element: <Civil />, index: true }],
   },
   {
     path: "/*",
     element: <Layout />,
     children: [
-      { path: "civil-and-industrial", element: <Civil /> },
       { path: "solar-energy", element: <Solar /> },
       { path: "marine-services", element: <Marine /> },
       { path: "configurator", element: <Configurator /> },
