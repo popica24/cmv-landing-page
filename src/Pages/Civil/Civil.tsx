@@ -35,7 +35,7 @@ const Civil = () => {
                 decât o clădire, este o investiție în parteneriate de lungă
                 durată.
               </span>
-              <button className="my-6 rounded-[164px] border-2 border-[#FF6600] text-white py-2 px-6 inline-flex items-center w-full justify-center lg:w-fit">
+              <button className="my-6 rounded-[164px] border-2 border-[#FF6600] text-white py-2 px-6 inline-flex items-center w-full justify-center lg:w-fit opacity-0 cursor-default">
                 Despre noi
                 <svg
                   className="ms-2"

@@ -200,12 +200,9 @@ const Personal = () => {
               </div>
               <div
                 className="h-[150px] w-[90vmin] sm:w-[75vw] lg:w-full mx-auto bg-cover bg-center rounded-[10px] mt-4 relative"
-                style={{ backgroundImage: "url(advanced-security.avif)" }}
+                style={{ backgroundImage: "url(photovoltaic-panels.avif)" }}
               >
                 <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
-                <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                  Securitate Avansată
-                </span>
               </div>
             </div>
           </div>

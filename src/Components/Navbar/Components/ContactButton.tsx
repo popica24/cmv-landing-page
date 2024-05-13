@@ -21,7 +21,8 @@ const ContactButton = () => {
     }
   }, [location.pathname]);
   return (
-    <button
+    <a
+      href="#contact"
       className={`inline-flex items-center whitespace-nowrap justify-center rounded-[8px] md:rounded-[24px] px-[5px] md:px-[10px] text-xs md:text-sm py-[2px] md:py-[6px] text-white ${bg}`}
     >
       <svg
@@ -48,7 +49,7 @@ const ContactButton = () => {
         />
       </svg>
       Contacteză-ne
-    </button>
+    </a>
   );
 };
 

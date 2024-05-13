@@ -54,7 +54,7 @@ const Frontpage = () => {
       title: "Marin Services",
       text: "Servicii maritime de încredere: reparatii, mentenanta si consultanta pentru ambarcatiuni, asigurând navigare sigură și eficientă pe tot parcursul.",
       left: {
-        text: "Industriale",
+        text: "Afla mai mult",
         link: "/marine-services",
         state: true,
       },

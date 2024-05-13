@@ -24,7 +24,7 @@ const ContactForm = () => {
   const border = `border-[${color}]`;
   const bg = `bg-[${color}]`;
   return (
-    <div className=" md:container mx-auto md:px-2 py-6 lg:pt-24">
+    <div className=" md:container mx-auto md:px-2 py-6 lg:pt-24" id="contact">
       <div className="grid col-span-1 xl:grid-cols-2">
         <div className="col-span-1 text-center place-content-center">
           <form action="" className="h-full">

@@ -9,7 +9,7 @@ const Marine = () => {
       <div className="mt-12 lg:mt-48">
         <div className="flex flex-col items-center justify-center font-roboto w-full">
           <div className="relative">
-            <h1 className="tracking-wider max-w-[55ch] text-[1rem] sm:text-[1.5rem] lg:text-[2.1rem] font-semibold uppercase ms-0 lg:ms-[18rem] xl:ms-[29.6rem]">
+            <h1 className="tracking-wider text-[1rem] sm:text-[1.5rem] lg:text-[2.1rem] font-semibold uppercase ms-0 lg:ms-[19rem] xl:ms-[29.6rem]">
               Construim viitorul{" "}
               <span className="text-linear-gradient-yellow text-[1.5rem] sm:text-[2.1rem] lg:text-[2.5rem] font-bold">
                 navigației
@@ -21,15 +21,15 @@ const Marine = () => {
               <Ship />
             </div>
           </div>
-          <article className="bg-[#487288] w-full flex items-center justify-center flex-col mt-4 pt-4 relative pb-[8.2rem]">
-            <div className="max-w-[38ch] sm:max-w-[55ch] lg:max-w-[77ch] flex flex-col md:items-start items-center ms-0 lg:ms-[18rem] xl:ms-[29.6rem]">
+          <article className="bg-[#487288] w-full flex items-center justify-center flex-col mt-4 pt-4 relative">
+            <div className="max-w-[38ch] sm:max-w-[55ch] lg:max-w-[65ch] xl:max-w-[77ch]  flex flex-col md:items-start items-center ms-0 lg:ms-[18rem] xl:ms-[29.6rem]">
               <span className="text-white lg:text-[1.125rem] leading-5 font-normal text-xs md:text-base">
                 Ne dedicăm să oferim servicii de înaltă calitate și soluții
                 personalizate pentru industria navală. Cu o experiență vastă
                 suntem partenerul ideal pentru întreținerea, reparația și
                 modernizarea flotelor industriale.
               </span>
-              <button className="my-6 rounded-[164px] border-2 border-[#ECA72C] text-white py-2 px-6 inline-flex items-center w-full justify-center lg:w-fit">
+              <button className="my-3 rounded-[164px] border-2 border-[#ECA72C] text-white py-2 px-6 inline-flex items-center w-full justify-center lg:w-fit cursor-default opacity-0">
                 Despre noi
                 <svg
                   className="ms-2"
@@ -44,6 +44,31 @@ const Marine = () => {
                     className="fill-current"
                   />
                 </svg>
+              </button>
+            </div>
+            <div className="lg:mt-[9rem] w-full">
+              <button
+                className={`border-2 border-white sm:rounded-t-[20px] rounded-t-[10px] lg:rounded-t-[30px] text-black bg-white 
+                w-full py-2 lg:text-base text-sm lg:py-3 inline-flex items-center justify-center px-2`}
+              >
+                <svg
+                  className="me-2"
+                  width="16"
+                  height="15"
+                  viewBox="0 0 23 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.2294 4.97998L3.50439 10.9241V18.8879H9.71166V13.0518H13.0092V18.8879H18.9544V10.9241L11.2294 4.97998Z"
+                    className="fill-current"
+                  />
+                  <path
+                    d="M19.2781 6.30367V2.23186H16.0248V3.80093L11.2296 0.112061L0 8.75079L1.55016 10.7658L11.2296 3.31775L20.909 10.7658L22.4591 8.75084L19.2781 6.30367Z"
+                    className="fill-current"
+                  />
+                </svg>
+                Construcții civile
               </button>
             </div>
           </article>

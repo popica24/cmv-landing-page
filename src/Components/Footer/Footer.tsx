@@ -135,7 +135,7 @@ const Footer = () => {
         />
       </div>
       <span className="text-white text-center flex items-center justify-center text-sm lg:text-[17.5px] pt-12 flex-col">
-        © 2024 CMV ELECTRICAL SOLUTION. Toate drepturile rezervate.
+        © 2024 CMV ELECTRICAL SOLUTIONS. Toate drepturile rezervate.
         <p className={textColor}> Politica de Confidențialitate </p>
         <p className={textColor}>Termeni și Condiții</p>
       </span>

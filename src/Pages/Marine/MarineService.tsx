@@ -104,7 +104,7 @@ const MarineService = () => {
               Oferim o gamă variată de servicii navale
             </span>
             <div className="w-full border-2 border-[#ECA72C] mt-2 mb-4"></div>
-            <p className="tracking-tight lg:max-w-[50ch]">
+            <p className="tracking-tight text-xs md:text-sm xl:text-base xl:max-w-[50ch]">
               Echipa noastră experimentată de lăcătuși navali este pregătită să
               abordeze orice provocare, fie că este vorba despre sudură,
               confecționare de piese sau reparații structurale.
@@ -157,7 +157,11 @@ const MarineService = () => {
         </div>
       </div>
       {/*Reccomends*/}
-      <div className="text-center py-6 px-4 lg:px-0 relative bg-[#5E727F]">
+      <div
+        className="text-center py-6 px-4 lg:px-0 relative bg-center bg-cover"
+        style={{ backgroundImage: "url(industrial-ship.avif)" }}
+      >
+        <div className="absolute inset-0 top-0 left-0 right-0 bottom-0 bg-black opacity-50"></div>
         <div className="flex items-center flex-col justify-center z-10 relative">
           <span
             className="text-[20px] uppercase text-white font-roboto"
@@ -168,10 +172,11 @@ const MarineService = () => {
           </span>
           <span className="w-full border-[3px] border-[#ECA72C] mt-4 mb-8 max-w-[900px]"></span>
           <span className="text-white max-w-[80ch] xl:max-w-none">
-            Suntem mândri să oferim servicii de construcții de cea mai înaltă
-            calitate, construind nu doar case și apartamente, ci și relații de
-            lungă durată cu clienții noștri. Contactați-ne pentru a <br />{" "}
-            discuta despre cum putem transforma visul dumneavoastră în
+            Cu mândrie vă prezentăm serviciile noastre de recondiționare și
+            modernizare a vaselor navale, unde calitatea înaltă este prioritatea
+            noastră. Nu doar că aducem îmbunătățiri navelor, dar construim și
+            relații de lungă durată cu clienții noștri. <br /> Contactați-ne
+            pentru a discuta cum putem transforma visul dumneavoastră naval în
             realitate!
           </span>
         </div>
