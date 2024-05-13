@@ -1,6 +1,6 @@
-import ContactForm from "./ContactForm";
-import RecommendCards from "./RecommendCards";
-import ServiceCards from "./ServiceCards";
+import ContactForm from "../../../Components/ContactForm";
+import RecommendCards from "../../../Components/RecommendCards";
+import ServiceCards from "../../../Components/ServiceCards";
 
 const IndustrialBulding = () => {
   return (
@@ -17,7 +17,7 @@ const IndustrialBulding = () => {
         >
           Industriale
         </span>
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-center my-6 w-full p-4">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-center my-6 w-full p-4 overflow-x-hidden">
           <div
             data-aos="flip-left"
             style={{ backgroundImage: "url(Industrial.avif)" }}
@@ -89,7 +89,7 @@ const IndustrialBulding = () => {
           Servici
         </span>
         <span className="font-bold text-[20px] fadeIn">Industriale</span>
-        <div className="flex flex-col items-center justify-center lg:grid grid-cols-5 my-6">
+        <div className="flex flex-col items-center justify-center lg:grid grid-cols-5 my-6 overflow-x-hidden">
           <div
             className="col-span-2 max-w-[89vmin] md:px-6 md:max-w-none mb-4 lg:mb-0"
             data-aos="fade-right"

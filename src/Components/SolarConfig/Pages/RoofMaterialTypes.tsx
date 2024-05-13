@@ -20,12 +20,14 @@ const RoofMaterialTypes = (props: Props) => {
         <span className="text-[14px] md:text-[20px] py-2 px-5 font-bold text-black mb-8">
           Cum este acoperișul dumneavoastră?
         </span>
-        <div className="flex flex-col md:flex-row justify-evenly items-center w-full">
+        <div className="flex flex-col max-w-[700px] mx-auto flex-wrap md:flex-row justify-evenly items-center w-full">
           <div className="flex flex-col items-center justify-center">
             <div
               onClick={() => setRoofType(1)}
-              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] ${
-                roofType == 1 ? "border-[#487288]" : "border-gray-400"
+              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
+                roofType == 1
+                  ? "border-[#487288]"
+                  : "border-gray-400 cursor-pointer"
               }`}
               style={{
                 background: "url(/tigla-ceramica.jpg)",
@@ -40,8 +42,10 @@ const RoofMaterialTypes = (props: Props) => {
           <div className="flex flex-col items-center justify-center">
             <div
               onClick={() => setRoofType(2)}
-              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] ${
-                roofType == 2 ? "border-[#487288]" : "border-gray-400"
+              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
+                roofType == 2
+                  ? "border-[#487288]"
+                  : "border-gray-400 cursor-pointer"
               }`}
               style={{
                 background: "url(/tigla-beton.jpg)",
@@ -57,8 +61,10 @@ const RoofMaterialTypes = (props: Props) => {
           <div className="flex flex-col items-center justify-center">
             <div
               onClick={() => setRoofType(3)}
-              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] ${
-                roofType == 3 ? "border-[#487288]" : "border-gray-400"
+              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
+                roofType == 3
+                  ? "border-[#487288]"
+                  : "border-gray-400 cursor-pointer"
               }`}
               style={{
                 background: "url(/tabla-zincata.jpg)",
@@ -73,8 +79,10 @@ const RoofMaterialTypes = (props: Props) => {
           <div className="flex flex-col items-center justify-center">
             <div
               onClick={() => setRoofType(4)}
-              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] ${
-                roofType == 4 ? "border-[#487288]" : "border-gray-400"
+              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
+                roofType == 4
+                  ? "border-[#487288]"
+                  : "border-gray-400 cursor-pointer"
               }`}
               style={{
                 background: "url(/sindrila.jpg)",
@@ -87,8 +95,10 @@ const RoofMaterialTypes = (props: Props) => {
           <div className="flex flex-col items-center justify-center">
             <div
               onClick={() => setRoofType(5)}
-              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] ${
-                roofType == 5 ? "border-[#487288]" : "border-gray-400"
+              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
+                roofType == 5
+                  ? "border-[#487288]"
+                  : "border-gray-400 cursor-pointer"
               }`}
               style={{
                 background: "url(/ardezie.jpg)",
@@ -97,6 +107,22 @@ const RoofMaterialTypes = (props: Props) => {
               }}
             />
             <span className="text-[19px] mt-4 font-semibold">Ardezie</span>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <div
+              onClick={() => setRoofType(6)}
+              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
+                roofType == 6
+                  ? "border-[#487288]"
+                  : "border-gray-400 cursor-pointer"
+              }`}
+              style={{
+                background: "url(/sandwich.jpg)",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            />
+            <span className="text-[19px] mt-4 font-semibold">Sandwich</span>
           </div>
         </div>
         <div className="flex flex-row items-center justify-between w-full mt-8">

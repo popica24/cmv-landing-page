@@ -26,8 +26,10 @@ function RoofTypes(props: Props) {
           <div className="flex flex-col items-center justify-center">
             <div
               onClick={() => setRoofType(1)}
-              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] ${
-                roofType == 1 ? "border-[#487288]" : "border-gray-400"
+              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
+                roofType == 1
+                  ? "border-[#487288]"
+                  : "border-gray-400 cursor-pointer"
               }`}
               style={{
                 background: "url(/incline-roof.avif)",
@@ -42,8 +44,10 @@ function RoofTypes(props: Props) {
           <div className="flex flex-col items-center justify-center">
             <div
               onClick={() => setRoofType(2)}
-              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] ${
-                roofType == 2 ? "border-[#487288]" : "border-gray-400"
+              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
+                roofType == 2
+                  ? "border-[#487288]"
+                  : "border-gray-400 cursor-pointer"
               }`}
               style={{
                 background: "url(/flat-roof.jpg)",
@@ -59,8 +63,10 @@ function RoofTypes(props: Props) {
           <div className="flex flex-col items-center justify-center">
             <div
               onClick={() => setRoofType(3)}
-              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] ${
-                roofType == 3 ? "border-[#487288]" : "border-gray-400"
+              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
+                roofType == 3
+                  ? "border-[#487288]"
+                  : "border-gray-400 cursor-pointer"
               }`}
               style={{
                 background: "url(/on-ground.avif)",

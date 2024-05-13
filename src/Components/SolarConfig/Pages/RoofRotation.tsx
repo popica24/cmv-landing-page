@@ -9,7 +9,7 @@ type Props = {
 
 const RoofRotation = (props: Props) => {
   const [rotation, setRotation] = useState("rotate-[180deg]");
-  const [pointRotation, setPointRotation] = useState("rotate-[270deg]");
+  const [pointRotation, setPointRotation] = useState("rotate-[-90deg]");
   return (
     <div
       className="flex flex-col md:flex-row justify-center  mx-auto max-w-[90vmin] xl:max-w-[1150px] px-[5vw] py-[5vh] rounded-[30px] bg-white"
@@ -18,8 +18,11 @@ const RoofRotation = (props: Props) => {
       <div className="flex flex-col justify-center md:justify-between items-center md:items-start w-full">
         <Headline title="Pasul 2" subtitle="ACOPERIȘUL TĂU" />
 
-        <span className="text-[14px] md:text-[20px] py-2 px-5 font-bold text-black mb-8">
-          Cum este acoperișul dumneavoastră?
+        <span className="text-[14px] md:text-[20px] py-2 px-5 font-bold text-black">
+          Care este orientarea acoperișului dumneavoastră?
+        </span>
+        <span className="text-[14px] md:text-[16px] py-2 px-5 text-gray-400 mb-8">
+          Poți apasa click pe direcția dorită. (E, SE, S, SV, V)
         </span>
         <div className="flex justify-center items-center w-full">
           <div className="relative flex items-center justify-center flex-col">

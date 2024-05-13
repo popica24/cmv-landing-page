@@ -16,6 +16,20 @@ const InstallPlace = () => {
         <form action="" className="w-full px-[5vw]">
           <div className="flex flex-col xl:flex-row items-center justify-center ">
             <Input
+              placeholder="Nume Prenume"
+              label="Nume Prenume"
+              type="text"
+              className="xl:me-10"
+            />
+            <Input
+              placeholder="Email"
+              label="Email"
+              type="text"
+              className="xl:ms-10"
+            />
+          </div>
+          <div className="flex flex-col xl:flex-row items-center justify-center xl:mt-10">
+            <Input
               placeholder="Oras"
               label="Oras"
               type="text"
@@ -30,8 +44,8 @@ const InstallPlace = () => {
           </div>
           <div className="flex flex-col xl:flex-row items-center justify-center xl:mt-10">
             <Input
-              placeholder="Numar"
-              label="Numar"
+              placeholder="Telefon"
+              label="Telefon"
               type="text"
               className="xl:me-10"
             />
@@ -42,8 +56,18 @@ const InstallPlace = () => {
               className="xl:ms-10"
             />
           </div>
-          <button className="bg-[#487288] rounded-[30px] text-white py-[12px] px-[20px] text-[1.3rem] font-bold mt-10">
-            Trimtie
+
+          <textarea
+            placeholder="Mesaj"
+            name=""
+            id=""
+            className="w-full min-h-[100px] max-h-[100px] border focus:border-gray-500 outline-none transition-colors p-3 text-sm my-2 xl:mt-10"
+          ></textarea>
+
+          <button
+            className={`bg-[#487288] hover:bg-[#2a4350] transition-colors duration-300 rounded-full text-white py-[15px] px-[30px] text-sm md:text-base xl:text-xl font-bold w-full`}
+          >
+            Trimite
           </button>
         </form>
       </div>

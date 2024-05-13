@@ -3,7 +3,6 @@ import Bulb from "./Components/Bulb";
 import Personal from "./Components/Personal";
 import Industrial from "./Components/Industrial";
 import { useLocation } from "react-router-dom";
-import Configurator from "../../Components/SolarConfig/Configurator";
 
 const Solar = () => {
   const location = useLocation();
@@ -135,9 +134,6 @@ const Solar = () => {
             </div>
           </article>
         </div>
-      </div>
-      <div className="mt-4">
-        <Configurator />
       </div>
       {personal ? <Personal /> : <Industrial />}
     </>
