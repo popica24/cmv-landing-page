@@ -1,5 +1,4 @@
 import CountUp from "react-countup";
-import ContactForm from "../../../Components/ContactForm";
 import RecommendCards from "../../../Components/RecommendCards";
 import Configurator from "../../../Components/SolarConfig/Configurator";
 import { useEffect } from "react";
