@@ -64,7 +64,7 @@ const Frontpage = () => {
   const cardImages = [civilIndustrial, solarEnergy, marinServices];
   return (
     <>
-      <div className="flex flex-col h-screen lg:flex-row justify-center items-center overflow-hidden relative">
+      <div className="flex flex-col min-h-screen max-h-screen h-screen lg:flex-row justify-center items-center overflow-hidden relative">
         <div className="absolute top-5 left-5"></div>
         {[0, 1, 2].map((i) => (
           <motion.div
