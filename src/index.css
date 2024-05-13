@@ -87,18 +87,3 @@ frontpage-card:hover + .fadeIn {
   animation-fill-mode: forwards; /* Keeps the element in its final state */
 }
 
-/* Safari support */
-@supports (-webkit-appearance: none) {
-  frontpage-card {
-    -webkit-flex: 1 1 20px;
-    flex: 1 1 20px; /* Standard flex property */
-    -webkit-transition: -webkit-flex 0.3s ease-in-out; /* Safari transition */
-    transition: flex 0.3s ease-in-out; /* Standard transition */
-  }
-
-  frontpage-card:hover {
-    -webkit-flex: 2 1 20px;
-    flex: 2 1 20px; /* Standard flex property */
-  }
-}
-
