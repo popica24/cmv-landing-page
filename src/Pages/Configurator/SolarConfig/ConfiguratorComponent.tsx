@@ -5,7 +5,7 @@ import InstallPlace from "./Pages/InstallPlace";
 import RoofMaterialTypes from "./Pages/RoofMaterialTypes";
 import RoofRotation from "./Pages/RoofRotation";
 
-const Configurator = () => {
+const ConfiguratorComponent = () => {
   const [step, setStep] = useState(1);
   const configuratorRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -65,4 +65,4 @@ const Configurator = () => {
   }
 };
 
-export default Configurator;
+export default ConfiguratorComponent;

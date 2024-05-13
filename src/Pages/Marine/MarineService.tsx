@@ -24,7 +24,7 @@ const MarineService = () => {
 
           <div className="lg:ms-4" data-aos="fade-right">
             <span className="font-semibold  lg:text-lg xl:text-[25px]">
-              Instalatii electrice pentru Vase
+              Instalații electrice pentru Vase
             </span>
             <div className="py-0.5 my-2 xl:my-4 bg-[#ECA72C] w-full max-w-[500px]"></div>
             <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
@@ -53,7 +53,7 @@ const MarineService = () => {
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          Reconditionare & Modernizare
+          Recondiționare & Modernizare
         </span>
         <div className="flex flex-col lg:flex-row-reverse items-center justify-center my-6 w-full p-4">
           <div
@@ -63,7 +63,7 @@ const MarineService = () => {
 
           <div className="lg:ms-4" data-aos="fade-right">
             <span className="font-semibold  lg:text-lg xl:text-[25px]">
-              Solutii complete de reconditionare si modernizare
+              Soluții complete de recondiționare și modernizare
             </span>
             <div className="py-0.5 my-2 xl:my-4 bg-[#ECA72C] w-full max-w-[500px]"></div>
             <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
@@ -101,7 +101,7 @@ const MarineService = () => {
             data-aos="fade-right"
           >
             <span className="text-2xl font-medium">
-              Oferim o gama variata de servicii navale
+              Oferim o gamă variată de servicii navale
             </span>
             <div className="w-full border-2 border-[#ECA72C] mt-2 mb-4"></div>
             <p className="tracking-tight lg:max-w-[50ch]">
@@ -149,7 +149,7 @@ const MarineService = () => {
               >
                 <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                 <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                  Tehnologie navala
+                  Tehnologie navală
                 </span>
               </div>
             </div>
@@ -223,7 +223,7 @@ const MarineService = () => {
             <RecommendCards
               text={
                 <span className="whitespace-nowrap">
-                  Punctualitate și <br /> Acuratete
+                  Punctualitate și <br /> Acuratețe
                 </span>
               }
               imagePath="Punctuality.svg"

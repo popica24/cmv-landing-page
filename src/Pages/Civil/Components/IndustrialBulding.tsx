@@ -26,16 +26,16 @@ const IndustrialBulding = () => {
 
           <div className="lg:ms-4" data-aos="fade-right">
             <span className="font-semibold  lg:text-lg xl:text-[25px]">
-              Inovatie si durabilitate in industria moderna
+              Inovație și durabilitate în industria modernă
             </span>
             <div className="py-0.5 my-2 xl:my-4 bg-[#F26100] w-full max-w-[500px]"></div>
             <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
               Suntem lideri în industria furnizării de soluții complete și
               personalizate în domeniile energiei verzi, centrelor de date și
-              centrelor farmaceutice. La [Numele Companiei], ne străduim să
-              aducem beneficiile tehnologiilor inovatoare și sustenabile în
-              afacerile dumneavoastră, oferindu-vă soluții avansate și fiabile,
-              adaptate cerințelor specifice ale fiecărui sector.
+              centrelor farmaceutice. Ne străduim să aducem beneficiile
+              tehnologiilor inovatoare și sustenabile în afacerile
+              dumneavoastră, oferindu-vă soluții avansate și fiabile, adaptate
+              cerințelor specifice ale fiecărui sector.
             </p>
             <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
               Echipa noastră de ingineri și specialiști în construcții
@@ -69,7 +69,7 @@ const IndustrialBulding = () => {
           data-aos-delay="400"
           data-aos-duration="500"
         >
-          <ServiceCards text="Infrastructura" imagePath="Energy.svg" />
+          <ServiceCards text="Infrastructură" imagePath="Energy.svg" />
         </div>
         <div
           className="col-span-1"
@@ -132,7 +132,7 @@ const IndustrialBulding = () => {
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                   <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                    Infrastructura
+                    Infrastructură
                   </span>
                 </div>
               </div>
@@ -219,7 +219,7 @@ const IndustrialBulding = () => {
             <RecommendCards
               text={
                 <span className="whitespace-nowrap">
-                  Punctualitate și <br /> Acuratete
+                  Punctualitate și <br /> Acuratețe
                 </span>
               }
               imagePath="Punctuality.svg"

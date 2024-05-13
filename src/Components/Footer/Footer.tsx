@@ -28,8 +28,8 @@ const Footer = () => {
         setBg("bg-[#487288]");
         break;
       default:
-        setBg("bg-[#2F4858]");
-        setColor("#487288");
+        setBg("bg-[#487288]");
+        setColor("#6EA73C");
     }
   }, [location.pathname]);
   const textColor = `text-[${color}]`;
@@ -84,8 +84,8 @@ const Footer = () => {
               </defs>
             </svg>
           }
-          WhiteText="Pitesti, Romania"
-          OrangeText="Locatia noastra"
+          WhiteText="Pitești, România"
+          OrangeText="Locația noastră"
         />
         <FooterItem
           TextColor={color}

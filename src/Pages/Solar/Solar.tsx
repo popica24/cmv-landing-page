@@ -2,7 +2,7 @@ import { useState } from "react";
 import Bulb from "./Components/Bulb";
 import Personal from "./Components/Personal";
 import Industrial from "./Components/Industrial";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Solar = () => {
   const location = useLocation();
@@ -36,10 +36,13 @@ const Solar = () => {
                 posibilități, o alternativă inovatoare și mult mai
                 convingătoare.
               </span>
-              <button className="my-6 rounded-[164px] border-2 border-[#6EA73C] text-white py-2 px-6 inline-flex items-center w-full justify-center lg:w-fit">
-                Despre noi
+              <Link
+                className="my-6 rounded-[164px] border-2 border-[#6EA73C] text-white py-2 px-6 inline-flex items-center w-full justify-center lg:w-fit"
+                to={"/configurator"}
+              >
+                Configurator
                 <svg
-                  className="ms-2"
+                  className="ms-2 rotate-[270deg]"
                   width="12"
                   height="8.67"
                   viewBox="0 0 18 13"
@@ -51,7 +54,7 @@ const Solar = () => {
                     className="fill-current"
                   />
                 </svg>
-              </button>
+              </Link>
             </div>
 
             <div className="lg:mt-[5rem]">
@@ -79,7 +82,7 @@ const Solar = () => {
                       className="fill-current"
                     />
                   </svg>
-                  Lucrari rezidențiale
+                  Lucrări rezidențiale
                 </button>
                 <button
                   className={`border-2 border-white sm:rounded-t-[20px] rounded-t-[10px] lg:rounded-t-[30px] ${
@@ -128,7 +131,7 @@ const Solar = () => {
                       </clipPath>
                     </defs>
                   </svg>
-                  Lucrari Industriale
+                  Lucrări Industriale
                 </button>
               </div>
             </div>

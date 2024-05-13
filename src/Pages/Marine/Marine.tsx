@@ -12,7 +12,7 @@ const Marine = () => {
             <h1 className="tracking-wider max-w-[55ch] text-[1rem] sm:text-[1.5rem] lg:text-[2.1rem] font-semibold uppercase ms-0 lg:ms-[18rem] xl:ms-[29.6rem]">
               Construim viitorul{" "}
               <span className="text-linear-gradient-yellow text-[1.5rem] sm:text-[2.1rem] lg:text-[2.5rem] font-bold">
-                NAVIGATIEI
+                navigației
               </span>{" "}
               <br />
               industriale

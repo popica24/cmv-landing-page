@@ -11,7 +11,7 @@ const InstallPlace = () => {
         <Headline title="Pasul 3" subtitle="locatie" />
 
         <span className="text-black font-medium text-[16px] xl:text-[20px] mb-5">
-          Introduceți valoare medie a <br /> facturilor de energie lunare
+          Specifică locul instalării
         </span>
         <form action="" className="w-full px-[5vw]">
           <div className="flex flex-col xl:flex-row items-center justify-center ">

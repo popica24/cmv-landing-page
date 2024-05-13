@@ -1,6 +1,6 @@
 import CountUp from "react-countup";
 import RecommendCards from "../../../Components/RecommendCards";
-import Configurator from "../../../Components/SolarConfig/Configurator";
+import ContactForm from "../../../Components/ContactForm";
 
 const Industrial = () => {
   return (
@@ -25,7 +25,7 @@ const Industrial = () => {
 
           <div className="lg:ms-4" data-aos="fade-right">
             <span className="font-semibold  lg:text-lg xl:text-[25px]">
-              Solutii verzi pentru afacerea ta
+              Soluții verzi pentru afacerea ta
             </span>
             <div className="py-0.5 my-2 xl:my-4 bg-[#6EA73C] w-full max-w-[500px]"></div>
             <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
@@ -70,7 +70,7 @@ const Industrial = () => {
           <span className="inline-flex items-center text-[47px] font-medium leading-[70px]">
             <CountUp start={2300} end={2014} duration={2} separator="" />
           </span>
-          <span className="text-basel">Experienta din</span>
+          <span className="text-basel">Experiența din</span>
         </div>
         <div className="flex flex-col items-center justify-center my-8 md:my-0">
           <svg
@@ -140,7 +140,7 @@ const Industrial = () => {
           <span className="inline-flex items-center text-[47px] font-medium leading-[70px]">
             <CountUp end={5} duration={2} separator="." />+
           </span>
-          <span className="text-base">MW Instalati</span>
+          <span className="text-base">MW Instalați</span>
         </div>
         <div className="flex flex-col items-center justify-center">
           <svg
@@ -159,7 +159,7 @@ const Industrial = () => {
           <span className="inline-flex items-center text-[47px] font-medium leading-[70px]">
             <CountUp end={50} duration={2} />+
           </span>
-          <span className="text-base">Clienti Multumiti</span>
+          <span className="text-base">Clienți Mulțumiți</span>
         </div>
       </div>
       {/*Smart Home*/}
@@ -213,7 +213,7 @@ const Industrial = () => {
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                   <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                    Instalatii electrice
+                    Instalații Electrice
                   </span>
                 </div>
               </div>
@@ -300,7 +300,7 @@ const Industrial = () => {
             <RecommendCards
               text={
                 <span className="whitespace-nowrap">
-                  Punctualitate și <br /> Acuratete
+                  Punctualitate și <br /> Acuratețe
                 </span>
               }
               imagePath="Punctuality.svg"
@@ -309,9 +309,7 @@ const Industrial = () => {
         </div>
       </div>
       {/*Contact Form*/}
-      <div className="my-4">
-        <Configurator />
-      </div>
+      <ContactForm />
     </>
   );
 };

@@ -22,7 +22,7 @@ const RoofRotation = (props: Props) => {
           Care este orientarea acoperișului dumneavoastră?
         </span>
         <span className="text-[14px] md:text-[16px] py-2 px-5 text-gray-400 mb-8">
-          Poți apasa click pe direcția dorită. (E, SE, S, SV, V)
+          Poți apăsa clic pe direcția dorită. (E, SE, S, SV, V)
         </span>
         <div className="flex justify-center items-center w-full">
           <div className="relative flex items-center justify-center flex-col">

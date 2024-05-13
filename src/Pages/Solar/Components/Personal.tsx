@@ -1,7 +1,7 @@
 import CountUp from "react-countup";
 import RecommendCards from "../../../Components/RecommendCards";
-import Configurator from "../../../Components/SolarConfig/Configurator";
 import { useEffect } from "react";
+import ContactForm from "../../../Components/ContactForm";
 
 const Personal = () => {
   useEffect(() => {
@@ -27,7 +27,7 @@ const Personal = () => {
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          Rezidentiale
+          Rezidențiale
         </span>
         <div className="flex flex-col-reverse lg:flex-row items-center justify-center my-6 w-full p-4">
           <div
@@ -37,7 +37,7 @@ const Personal = () => {
 
           <div className="lg:ms-4" data-aos="fade-right">
             <span className="font-semibold  lg:text-lg xl:text-[25px]">
-              Solutii verzi pentru Resedinte Civile
+              Soluții verzi pentru Reședințe Civile
             </span>
             <div className="py-0.5 my-2 xl:my-4 bg-[#6EA73C] w-full max-w-[500px]"></div>
             <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
@@ -83,7 +83,7 @@ const Personal = () => {
           <span className="inline-flex items-center text-[47px] font-medium leading-[70px]">
             <CountUp start={2300} end={2014} duration={2} separator="" />
           </span>
-          <span className="text-basel">Experienta din</span>
+          <span className="text-basel">Experiență din</span>
         </div>
         <div className="flex flex-col items-center justify-center my-8 md:my-0">
           <svg
@@ -153,7 +153,7 @@ const Personal = () => {
           <span className="inline-flex items-center text-[47px] font-medium leading-[70px]">
             <CountUp end={100} duration={2} />+
           </span>
-          <span className="text-base">Clienti Multumiti</span>
+          <span className="text-base">Clienți Mulțumiți</span>
         </div>
       </div>
       {/*Smart Home*/}
@@ -284,7 +284,7 @@ const Personal = () => {
             <RecommendCards
               text={
                 <span className="whitespace-nowrap">
-                  Punctualitate și <br /> Acuratete
+                  Punctualitate și <br /> Acuratețe
                 </span>
               }
               imagePath="Punctuality.svg"
@@ -293,9 +293,7 @@ const Personal = () => {
         </div>
       </div>
       {/*Contact Form*/}
-      <div className="my-4">
-        <Configurator />
-      </div>
+      <ContactForm />
     </>
   );
 };

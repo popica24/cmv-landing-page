@@ -17,7 +17,7 @@ const ContactButton = () => {
         setBg("bg-[#ECA72C]");
         break;
       default:
-        setBg("bg-[#2F4858]");
+        setBg("bg-[#487288]");
     }
   }, [location.pathname]);
   return (

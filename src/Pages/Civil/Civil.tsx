@@ -78,7 +78,7 @@ const Civil = () => {
                       className="fill-current"
                     />
                   </svg>
-                  Constructii civile
+                  Construcții civile
                 </button>
                 <button
                   className={`border-2 border-white sm:rounded-t-[20px] rounded-t-[10px] lg:rounded-t-[30px] ${
@@ -127,7 +127,7 @@ const Civil = () => {
                       </clipPath>
                     </defs>
                   </svg>
-                  Constructii Industriale
+                  Construcții Industriale
                 </button>
               </div>
             </div>

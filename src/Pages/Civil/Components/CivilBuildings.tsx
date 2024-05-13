@@ -61,7 +61,7 @@ const CivilBuildings = () => {
           data-aos-delay="300"
           data-aos-duration="500"
         >
-          <ServiceCards text="Cladiri Office" imagePath="Office.svg" />
+          <ServiceCards text="Clădiri Office" imagePath="Office.svg" />
         </div>
         <div
           className="col-span-1"
@@ -78,7 +78,7 @@ const CivilBuildings = () => {
           data-aos-duration="500"
         >
           <ServiceCards
-            text="Cladiri Industriale"
+            text="Clădiri Industriale"
             imagePath="IndustrialBuildings.svg"
           />
         </div>
@@ -217,7 +217,7 @@ const CivilBuildings = () => {
             <RecommendCards
               text={
                 <span className="whitespace-nowrap">
-                  Punctualitate și <br /> Acuratete
+                  Punctualitate și <br /> Acuratețe
                 </span>
               }
               imagePath="Punctuality.svg"

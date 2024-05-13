@@ -5,10 +5,19 @@ import Headline from "../Components/Headline";
 type Props = {
   nextStep: () => void;
   previousStep: () => void;
+  toForm: () => void;
 };
 
-const RoofMaterialTypes = (props: Props) => {
+function RoofTypes(props: Props) {
   const [roofType, setRoofType] = useState(1);
+
+  const handleNextStep = () => {
+    if (roofType == 1) {
+      return props.nextStep();
+    }
+    return props.toForm();
+  };
+
   return (
     <div
       className="flex flex-col md:flex-row justify-center  mx-auto max-w-[90vmin] xl:max-w-[1150px] px-[5vw] py-[5vh] rounded-[30px] bg-white"
@@ -20,7 +29,7 @@ const RoofMaterialTypes = (props: Props) => {
         <span className="text-[14px] md:text-[20px] py-2 px-5 font-bold text-black mb-8">
           Cum este acoperișul dumneavoastră?
         </span>
-        <div className="flex flex-col max-w-[700px] mx-auto flex-wrap md:flex-row justify-evenly items-center w-full">
+        <div className="flex flex-col md:flex-row justify-evenly items-center w-full">
           <div className="flex flex-col items-center justify-center">
             <div
               onClick={() => setRoofType(1)}
@@ -30,13 +39,13 @@ const RoofMaterialTypes = (props: Props) => {
                   : "border-gray-400 cursor-pointer"
               }`}
               style={{
-                background: "url(/tigla-ceramica.jpg)",
+                background: "url(/incline-roof.avif)",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
             />
             <span className="text-[19px] mt-4 font-semibold">
-              Țiglă ceramica
+              Acoperiș înclinat
             </span>
           </div>
           <div className="flex flex-col items-center justify-center">
@@ -48,14 +57,14 @@ const RoofMaterialTypes = (props: Props) => {
                   : "border-gray-400 cursor-pointer"
               }`}
               style={{
-                background: "url(/tigla-beton.jpg)",
+                background: "url(/flat-roof.jpg)",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
               }}
             />
             <span className="text-[19px] mt-4 font-semibold">
-              Țiglă din beton
+              Acoperiș drept
             </span>
           </div>
           <div className="flex flex-col items-center justify-center">
@@ -67,62 +76,12 @@ const RoofMaterialTypes = (props: Props) => {
                   : "border-gray-400 cursor-pointer"
               }`}
               style={{
-                background: "url(/tabla-zincata.jpg)",
+                background: "url(/on-ground.avif)",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
             />
-            <span className="text-[19px] mt-4 font-semibold">
-              Tabla zincata
-            </span>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <div
-              onClick={() => setRoofType(4)}
-              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
-                roofType == 4
-                  ? "border-[#487288]"
-                  : "border-gray-400 cursor-pointer"
-              }`}
-              style={{
-                background: "url(/sindrila.jpg)",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-            />
-            <span className="text-[19px] mt-4 font-semibold">Şindrilă</span>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <div
-              onClick={() => setRoofType(5)}
-              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
-                roofType == 5
-                  ? "border-[#487288]"
-                  : "border-gray-400 cursor-pointer"
-              }`}
-              style={{
-                background: "url(/ardezie.jpg)",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-            />
-            <span className="text-[19px] mt-4 font-semibold">Ardezie</span>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <div
-              onClick={() => setRoofType(6)}
-              className={`w-[176px] h-[176px] rounded-[10px] border-[6px] transition-colors duration-500 ${
-                roofType == 6
-                  ? "border-[#487288]"
-                  : "border-gray-400 cursor-pointer"
-              }`}
-              style={{
-                background: "url(/sandwich.jpg)",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
-              }}
-            />
-            <span className="text-[19px] mt-4 font-semibold">Sandwich</span>
+            <span className="text-[19px] mt-4 font-semibold">Pe sol</span>
           </div>
         </div>
         <div className="flex flex-row items-center justify-between w-full mt-8">
@@ -132,11 +91,11 @@ const RoofMaterialTypes = (props: Props) => {
           >
             &#8249; Pasul anterior
           </span>
-          <NextStep nextStep={props.nextStep} />
+          <NextStep nextStep={handleNextStep} />
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default RoofMaterialTypes;
+export default RoofTypes;

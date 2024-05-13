@@ -55,7 +55,7 @@ const ContactForm = () => {
                     selectedType == 1 && `${bg} text-white`
                   }`}
                 >
-                  Persoana fizică
+                  Persoană fizică
                 </label>
                 <label
                   onClick={() => setSelectedType(2)}
@@ -64,20 +64,33 @@ const ContactForm = () => {
                     selectedType == 2 && `${bg} text-white`
                   }`}
                 >
-                  Persoana juridică
+                  Persoană juridică
                 </label>
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center sm:w-[90%] w-full">
-                <input
-                  placeholder="Nume Prenume"
-                  required
-                  minLength={3}
-                  maxLength={36}
-                  type="text"
-                  name="name"
-                  id="name"
-                  className="border border-[#2F4858] rounded-[5px] px-4 py-2 w-full sm:me-[6px]"
-                />
+                {selectedType == 1 ? (
+                  <input
+                    placeholder="Nume Prenume"
+                    required
+                    minLength={3}
+                    maxLength={36}
+                    type="text"
+                    name="name"
+                    id="name"
+                    className="border border-[#2F4858] rounded-[5px] px-4 py-2 w-full sm:me-[6px]"
+                  />
+                ) : (
+                  <input
+                    placeholder="Nume Firma"
+                    required
+                    minLength={3}
+                    maxLength={36}
+                    type="text"
+                    name="name"
+                    id="name"
+                    className="border border-[#2F4858] rounded-[5px] px-4 py-2 w-full sm:me-[6px]"
+                  />
+                )}
                 <input
                   placeholder="Email"
                   required
