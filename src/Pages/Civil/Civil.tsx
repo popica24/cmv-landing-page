@@ -8,7 +8,7 @@ const Civil = () => {
   const location = useLocation();
   const leftState = location.state?.leftLinkState;
 
-  const [civil, setCivil] = useState(leftState || false);
+  const [civil, setCivil] = useState(leftState || true);
   document.title = "CMV Electrical Solutions | Civil & Industrial";
   return (
     <>

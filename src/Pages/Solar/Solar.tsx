@@ -8,7 +8,7 @@ const Solar = () => {
   const location = useLocation();
   const leftState = location.state?.leftLinkState;
 
-  const [personal, setPersonal] = useState(leftState || false);
+  const [personal, setPersonal] = useState(leftState || true);
   document.title = "CMV Electrical Solutions | Solar Energy";
 
   return (

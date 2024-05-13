@@ -48,27 +48,10 @@ const Marine = () => {
             </div>
             <div className="lg:mt-[9rem] w-full">
               <button
-                className={`border-2 border-white sm:rounded-t-[20px] rounded-t-[10px] lg:rounded-t-[30px] text-black bg-white 
+                className={`border-2 border-white sm:rounded-t-[20px] rounded-t-[10px] lg:rounded-t-[30px] text-white bg-white 
                 w-full py-2 lg:text-base text-sm lg:py-3 inline-flex items-center justify-center px-2`}
               >
-                <svg
-                  className="me-2"
-                  width="16"
-                  height="15"
-                  viewBox="0 0 23 19"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.2294 4.97998L3.50439 10.9241V18.8879H9.71166V13.0518H13.0092V18.8879H18.9544V10.9241L11.2294 4.97998Z"
-                    className="fill-current"
-                  />
-                  <path
-                    d="M19.2781 6.30367V2.23186H16.0248V3.80093L11.2296 0.112061L0 8.75079L1.55016 10.7658L11.2296 3.31775L20.909 10.7658L22.4591 8.75084L19.2781 6.30367Z"
-                    className="fill-current"
-                  />
-                </svg>
-                Construcții civile
+                Servicii marine
               </button>
             </div>
           </article>
