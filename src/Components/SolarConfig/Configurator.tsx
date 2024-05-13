@@ -35,7 +35,7 @@ const Configurator = () => {
     return <RoofRotation nextStep={nextStep} previousStep={previousStep} />;
   }
   if (step == 5) {
-    return <InstallPlace nextStep={nextStep} previousStep={previousStep} />;
+    return <InstallPlace />;
   }
 };
 
