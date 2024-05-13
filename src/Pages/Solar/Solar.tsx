@@ -136,7 +136,9 @@ const Solar = () => {
           </article>
         </div>
       </div>
-      <Configurator />
+      <div className="mt-4">
+        <Configurator />
+      </div>
       {personal ? <Personal /> : <Industrial />}
     </>
   );

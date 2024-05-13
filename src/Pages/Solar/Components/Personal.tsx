@@ -181,7 +181,7 @@ const Personal = () => {
                 </div>
                 <div
                   className="h-[150px] w-[90vmin] sm:w-[75vw] lg:w-full mx-auto bg-cover bg-center aspect-[16/9] rounded-[10px] relative lg:ms-2"
-                  style={{ backgroundImage: "url(solar-house.jpg)" }}
+                  style={{ backgroundImage: "url(solar-house.avif)" }}
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                 </div>

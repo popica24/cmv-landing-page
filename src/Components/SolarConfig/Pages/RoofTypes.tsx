@@ -30,7 +30,7 @@ function RoofTypes(props: Props) {
                 roofType == 1 ? "border-[#487288]" : "border-gray-400"
               }`}
               style={{
-                background: "url(/incline-roof.jpg)",
+                background: "url(/incline-roof.avif)",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
@@ -63,7 +63,7 @@ function RoofTypes(props: Props) {
                 roofType == 3 ? "border-[#487288]" : "border-gray-400"
               }`}
               style={{
-                background: "url(/on-ground.jpg)",
+                background: "url(/on-ground.avif)",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}

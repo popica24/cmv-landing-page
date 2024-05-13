@@ -128,7 +128,7 @@ const IndustrialBulding = () => {
                 </div>
                 <div
                   className="h-[150px] w-[90vmin] sm:w-[75vw] lg:w-full mx-auto bg-cover bg-center aspect-[16/9] rounded-[10px] relative lg:ms-2"
-                  style={{ backgroundImage: "url(infrastructure.jpg)" }}
+                  style={{ backgroundImage: "url(infrastructure.avif)" }}
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                   <span className="text-white absolute top-6 left-6 text-xl font-roboto">
@@ -138,7 +138,7 @@ const IndustrialBulding = () => {
               </div>
               <div
                 className="h-[150px] w-[90vmin] sm:w-[75vw] lg:w-full mx-auto bg-cover bg-center rounded-[10px] mt-4 relative"
-                style={{ backgroundImage: "url(pharma.jpg)" }}
+                style={{ backgroundImage: "url(pharma.avif)" }}
               >
                 <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                 <span className="text-white absolute top-6 left-6 text-xl font-roboto">
