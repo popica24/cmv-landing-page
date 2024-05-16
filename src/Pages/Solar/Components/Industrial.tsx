@@ -163,32 +163,28 @@ const Industrial = () => {
       </div>
       {/*Smart Home*/}
       <div className="flex flex-col items-center justify-center w-full container mx-auto xl:px-24 p-4">
-        <span className="text-[#6EA73C] font-semibold slide-from-bottom">
-          Servici
-        </span>
-        <span className="font-bold text-[20px] fadeIn">EcoPower Solutions</span>
         <div className="flex flex-col items-center justify-center lg:grid grid-cols-5 my-6 overflow-x-hidden">
           <div
             className="col-span-2 max-w-[89vmin] md:px-6 md:max-w-none mb-4 lg:mb-0"
             data-aos="fade-right"
           >
-            <span className="text-2xl font-medium">
+            <span className="font-semibold lg:text-lg xl:text-[25px]">
               Solutii sustenabile pentru afacerea ta
             </span>
             <div className="w-full border-2 border-[#6EA73C] mt-2 mb-4"></div>
-            <p className="tracking-tight lg:max-w-[50ch]">
+            <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
               Echipa noastră de experți în energie solară vă stă la dispoziție
               pentru a vă ghida prin procesul de selectare, proiectare și
               instalare a sistemului de panouri fotovoltaice care să se
               potrivească perfect nevoilor și obiectivelor dumneavoastră.
             </p>
-            <p className="tracking-tight lg:max-w-[50ch]">
+            <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
               În plus față de instalarea panourilor fotovoltaice, oferim și
               soluții electrice complete pentru energie verde, inclusiv sisteme
               de stocare a energiei, încărcătoare pentru vehicule electrice și
               alte tehnologii inovatoare.
             </p>
-            <p className="tracking-tight lg:max-w-[50ch]">
+            <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
               Împreună, putem construi un viitor mai curat și mai sustenabil
               pentru generațiile viitoare. Contactați-ne astăzi pentru a începe
               călătoria dumneavoastră spre un viitor verde și luminos!
@@ -203,7 +199,7 @@ const Industrial = () => {
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                   <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                    Smart device
+                    Întocmire dosar
                   </span>
                 </div>
                 <div
@@ -212,7 +208,7 @@ const Industrial = () => {
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                   <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                    Instalații Electrice
+                    Consultanță, proiectare și autorizare
                   </span>
                 </div>
               </div>
@@ -222,7 +218,7 @@ const Industrial = () => {
               >
                 <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                 <span className="text-white absolute top-6 left-6 text-xl font-roboto">
-                  Panouri fotovoltaice
+                  Garanție, mentenanță și monitorizare
                 </span>
               </div>
             </div>

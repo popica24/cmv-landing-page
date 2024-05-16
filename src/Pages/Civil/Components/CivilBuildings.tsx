@@ -96,11 +96,11 @@ const CivilBuildings = () => {
             className="col-span-2 max-w-[89vmin] md:px-6 md:max-w-none mb-4 lg:mb-0"
             data-aos="fade-right"
           >
-            <span className="text-2xl font-medium">
+            <span className="font-semibold  lg:text-lg xl:text-[25px]">
               Transformă-ți Casa într-un Spațiu Inteligent
             </span>
             <div className="w-full border-2 border-[#F26100] mt-2 mb-4"></div>
-            <p className="tracking-tight lg:max-w-[50ch]">
+            <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
               Ne dedicăm aducerea inovației și eficienței în casele și afacerile
               clienților noștri prin servicii de electricitate și soluții
               inteligente pentru casă. Cu o echipă de specialiști pasionați și
@@ -109,7 +109,7 @@ const CivilBuildings = () => {
               a aduce confort, securitate și economii de energie în viața de zi
               cu zi.
             </p>
-            <p className="tracking-tight lg:max-w-[50ch]">
+            <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
               Oferim soluții complete de smart home care permit controlul și
               automatizarea diverselor aspecte ale casei tale, de la iluminat și
               climatizare până la securitate și divertisment.
@@ -151,8 +151,12 @@ const CivilBuildings = () => {
         </div>
       </div>
       {/*Reccomends*/}
-      <div className="text-center bg-[#5E727F] py-6 px-4 lg:px-0">
-        <div className="flex items-center flex-col justify-center">
+      <div
+        className="text-center bg-center bg-cover py-6 px-4 lg:px-0 relative"
+        style={{ backgroundImage: "url(civil-construction.avif)" }}
+      >
+        <div className="absolute inset-0 top-0 left-0 right-0 bottom-0 bg-black opacity-50"></div>
+        <div className="flex items-center flex-col justify-center z-10 relative">
           <span
             className="text-[20px] uppercase text-white font-roboto"
             data-aos="zoom-in-up"

@@ -100,22 +100,22 @@ const MarineService = () => {
             className="col-span-2 max-w-[89vmin] md:px-6 md:max-w-none mb-4 lg:mb-0"
             data-aos="fade-right"
           >
-            <span className="text-2xl font-medium">
+            <span className="font-semibold lg:text-lg xl:text-[25px]">
               Oferim o gamă variată de servicii navale
             </span>
             <div className="w-full border-2 border-[#ECA72C] mt-2 mb-4"></div>
-            <p className="tracking-tight text-xs md:text-sm xl:text-base xl:max-w-[50ch]">
+            <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
               Echipa noastră experimentată de lăcătuși navali este pregătită să
               abordeze orice provocare, fie că este vorba despre sudură,
               confecționare de piese sau reparații structurale.
             </p>
-            <p className="tracking-tight lg:max-w-[50ch]">
+            <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
               Echipa noastră de ingineri și tehnicieni navali vă ajută să
               identificați și să implementați cele mai potrivite soluții pentru
               nevoile unice ale navei dvs., asigurându-vă că aceasta rămâne la
               cel mai înalt nivel de performanță.
             </p>
-            <p className="tracking-tight lg:max-w-[50ch]">
+            <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
               Suntem dedicați să aducem cele mai noi tehnologii și soluții
               inovatoare în domeniul naval. De la sisteme avansate de navigație
               și control la tehnologii de siguranță și comunicații de vârf.

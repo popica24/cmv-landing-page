@@ -59,7 +59,7 @@ const InstallPlace = () => {
           <Headline title="Pasul 3" subtitle="locatie" />
 
           <span className="text-black font-medium text-[16px] xl:text-[20px] mb-5">
-            Specifică locul instalării
+            Specifică locul instalării / Sistemul dorit
           </span>
           <div className="w-full px-[5vw]">
             <div className="flex flex-col xl:flex-row items-center justify-center ">
@@ -113,7 +113,7 @@ const InstallPlace = () => {
 
             <textarea
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="Mesaj"
+              placeholder="Descrie sistemul dorit"
               name=""
               id=""
               className="w-full min-h-[100px] max-h-[100px] border focus:border-gray-500 outline-none transition-colors p-3 text-sm my-2 xl:mt-10"

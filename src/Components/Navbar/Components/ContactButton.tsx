@@ -22,7 +22,7 @@ const ContactButton = () => {
   }, [location.pathname]);
   return (
     <a
-      href="#contact"
+      href={location.pathname == "/solar-energy" ? "/configurator" : "#contact"}
       className={`inline-flex items-center whitespace-nowrap justify-center rounded-[8px] md:rounded-[24px] px-[5px] md:px-[10px] text-xs md:text-sm py-[2px] md:py-[6px] text-white ${bg}`}
     >
       <svg

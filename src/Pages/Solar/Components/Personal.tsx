@@ -162,23 +162,24 @@ const Personal = () => {
             className="col-span-2 max-w-[89vmin] md:px-6 md:max-w-none mb-4 lg:mb-0"
             data-aos="fade-right"
           >
-            <span className="text-2xl font-medium">
+            <span className="font-semibold lg:text-lg xl:text-[25px]">
               Inteligent și Eco-friendly
             </span>
             <div className="w-full border-2 border-[#6EA73C] mt-2 mb-4"></div>
-            <p className="tracking-tight lg:max-w-[50ch]">
-              Ne dedicăm aducerii inovației și eficienței în locuințele
+            <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
+              Ne angajăm să aducem inovație și eficiență în locuințele
               clienților noștri prin montarea și instalarea panourilor
-              fotovoltaice. Cu o echipă de specialiști pasionați și experți în
-              domeniul energiei solare, ne propunem să transformăm visele tale
-              de a avea o locuință alimentată de energie regenerabilă în
-              realitate. Suntem aici pentru a aduce confort, economii de energie
-              și independență energetică în viața de zi cu zi.
+              fotovoltaice. Cu o echipă de experți dedicați și pasionați de
+              energia solară, transformăm visul de a avea o locuință alimentată
+              de energie regenerabilă în realitate. Suntem aici pentru a oferi
+              confort, economii și independență energetică în viața ta de zi cu
+              zi.
             </p>
-            <p className="tracking-tight lg:max-w-[50ch]">
+            <p className="sm:text-start text-xs md:text-sm xl:text-base xl:max-w-[79ch]">
               Oferim soluții complete pentru instalarea panourilor fotovoltaice,
-              adaptate nevoilor și dorințelor tale, astfel încât să beneficiezi
-              de toate avantajele unei locuințe alimentate de energia solară.
+              personalizate pentru a se potrivi perfect nevoilor și
+              preferințelor tale, astfel încât să te bucuri de toate beneficiile
+              unei locuințe alimentate de energia solară.
             </p>
           </div>
           <div className="col-span-3 lg:ps-6" data-aos="fade-left">
@@ -186,21 +187,30 @@ const Personal = () => {
               <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full">
                 <div
                   className="h-[150px] mx-auto w-[90vmin] sm:w-[75vw] lg:w-full bg-cover bg-center aspect-[16/9] rounded-[10px] relative mb-4 lg:mb-0 lg:me-2"
-                  style={{ backgroundImage: "url(inverter.avif)" }}
+                  style={{ backgroundImage: "url(ongrid.avif)" }}
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
+                  <span className="text-white absolute top-6 left-6 text-xl font-roboto">
+                    Ongrid
+                  </span>
                 </div>
                 <div
                   className="h-[150px] w-[90vmin] sm:w-[75vw] lg:w-full mx-auto bg-cover bg-center aspect-[16/9] rounded-[10px] relative lg:ms-2"
-                  style={{ backgroundImage: "url(solar-house.avif)" }}
+                  style={{ backgroundImage: "url(offgrid.avif)" }}
                 >
+                  <span className="text-white absolute top-6 left-6 text-xl font-roboto z-10">
+                    Offgrid
+                  </span>
                   <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
                 </div>
               </div>
               <div
                 className="h-[150px] w-[90vmin] sm:w-[75vw] lg:w-full mx-auto bg-cover bg-center rounded-[10px] mt-4 relative"
-                style={{ backgroundImage: "url(photovoltaic-panels.avif)" }}
+                style={{ backgroundImage: "url(hybrid.avif)" }}
               >
+                <span className="text-white absolute top-6 left-6 text-xl font-roboto z-10">
+                  Hybrid
+                </span>
                 <div className="absolute inset-0 bg-black bg-opacity-25 rounded-[10px]"></div>
               </div>
             </div>
