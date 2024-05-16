@@ -1,4 +1,7 @@
+import { useLocation } from "react-router-dom";
+
 const MobileMenu = () => {
+  const location = useLocation();
   return (
     <label
       className="relative z-40 cursor-pointer px-3 py-6 sm:hidden block"
@@ -13,7 +16,7 @@ const MobileMenu = () => {
         <div className="float-right min-h-full w-[85%] bg-white px-6 pt-12 shadow-2xl">
           <menu>
             <li>
-              <a href="/civil-and-industrial">Civil and Industrial</a>
+              <a href="/">Civil and Industrial</a>
             </li>
             <li>
               <a href="/solar-energy">Solar energy</a>
@@ -69,7 +72,14 @@ const MobileMenu = () => {
                 />
               </svg>
             </div>
-            <button className="inline-flex items-center rounded-[42px] text-white bg-linear-contact pb-1.5 pt-1 px-3 text-sm font-thin tracking-wider">
+            <a
+              href={
+                location.pathname == "/solar-energy"
+                  ? "/configurator"
+                  : "#contact"
+              }
+              className="inline-flex items-center rounded-[42px] text-white bg-linear-contact pb-1.5 pt-1 px-3 text-sm font-thin tracking-wider"
+            >
               <svg
                 className="me-1.5 mt-0.5"
                 width="19"
@@ -97,7 +107,7 @@ const MobileMenu = () => {
               </svg>
 
               <span>Contacteză-ne</span>
-            </button>
+            </a>
           </menu>
         </div>
       </div>
