@@ -1,8 +1,10 @@
-import { FormEvent, useRef } from "react";
+import { FormEvent, useRef, useState } from "react";
 import { useConfigurator } from "../../../../Context/ConfiguratorContext";
 import Headline from "../Components/Headline";
 import Input from "../Components/Input";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+
 const InstallPlace = () => {
   const {
     MonthlyConsumption,
@@ -26,12 +28,25 @@ const InstallPlace = () => {
     setMessage,
     Message,
   } = useConfigurator();
+  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
   const form = useRef<any>();
   function handleSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
-    emailjs.sendForm("service_qwxrzdm", "template_854ekf6", form.current, {
-      publicKey: "FL_lzrGz2_DG9O931",
-    });
+    setLoading(true);
+
+    emailjs
+      .sendForm("service_qwxrzdm", "template_854ekf6", form.current, {
+        publicKey: "FL_lzrGz2_DG9O931",
+      })
+      .then(() => {
+        setSent(true), setLoading(false);
+        toast("Formularul a fost trimis !");
+      })
+      .catch(() => {
+        setSent(false), setLoading(false);
+        toast.error("A aparut o eroare la trimitere");
+      });
   }
 
   return (
@@ -139,9 +154,12 @@ const InstallPlace = () => {
               <input type="hidden" name="from_postalcode" value={Postalcode} />
               <input type="hidden" name="from_message" value={Message} />
               <button
-                className={`bg-[#487288] hover:bg-[#2a4350] transition-colors duration-300 rounded-full text-white py-[15px] px-[30px] text-sm md:text-base xl:text-xl font-bold w-full`}
+                disabled={sent || loading}
+                className={`bg-[#487288]  ${
+                  sent ? "cursor-default" : "hover:bg-[#2a4350]"
+                } transition-colors duration-300 rounded-full text-white py-[15px] px-[30px] text-sm md:text-base xl:text-xl font-bold w-full`}
               >
-                Trimite
+                {loading ? "Se trimite" : sent ? "Trimis" : "Trimite"}
               </button>
             </form>
           </div>

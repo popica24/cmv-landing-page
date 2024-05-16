@@ -1,9 +1,12 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
   const location = useLocation();
+  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const [color, setColor] = useState("");
   useEffect(() => {
@@ -27,9 +30,19 @@ const ContactForm = () => {
   const form = useRef<any>();
   function handleSubmit(e: FormEvent<HTMLFormElement>): void {
     e.preventDefault();
-    emailjs.sendForm("service_qwxrzdm", "template_ct5k6zu", form.current, {
-      publicKey: "FL_lzrGz2_DG9O931",
-    });
+    setLoading(true);
+    emailjs
+      .sendForm("service_qwxrzdm", "template_ct5k6zu", form.current, {
+        publicKey: "FL_lzrGz2_DG9O931",
+      })
+      .then(() => {
+        setSent(true), setLoading(false);
+        toast("Formularul a fost trimis !");
+      })
+      .catch(() => {
+        setSent(false), setLoading(false);
+        toast.error("A aparut o eroare la trimitere");
+      });
   }
   return (
     <div className=" md:container mx-auto md:px-2 py-6 lg:pt-24" id="contact">
@@ -138,10 +151,11 @@ const ContactForm = () => {
                 className="max-h-[150px] min-h-[150px] sm:w-[90%] w-full mt-6 border border-[#2F4858] rounded-[5px] px-4 py-2"
               ></textarea>
               <button
+                disabled={loading || sent}
                 type="submit"
-                className={`bg-[#2F4858] text-white px-8 py-2.5 rounded-[42px] mt-6 text-[13px] hover:${bg} w-full sm:w-min`}
+                className={`bg-[#2F4858] text-white px-8 py-2.5 rounded-[42px] mt-6 text-[13px] hover:${bg} w-full sm:w-min whitespace-nowrap`}
               >
-                Trimite
+                {loading ? "Se trimite" : sent ? "Trimis" : "Trimite"}
               </button>
             </div>
           </form>
