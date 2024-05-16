@@ -1,13 +1,26 @@
+import { useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 const MobileMenu = () => {
   const location = useLocation();
+  const checkboxRef = useRef<any>(null);
+
+  const closeMenu = () => {
+    if (checkboxRef.current) {
+      checkboxRef.current.checked = false;
+    }
+  };
   return (
     <label
       className="relative z-40 cursor-pointer px-3 py-6 sm:hidden block"
       htmlFor="mobile-menu"
     >
-      <input className="peer hidden" type="checkbox" id="mobile-menu" />
+      <input
+        ref={checkboxRef}
+        className="peer hidden"
+        type="checkbox"
+        id="mobile-menu"
+      />
       <div className="relative z-50 block h-[1px] w-7 bg-black bg-transparent content-[''] before:absolute before:top-[-0.35rem] before:z-50 before:block before:h-full before:w-full before:bg-black before:transition-all before:duration-200 before:ease-out before:content-[''] after:absolute after:right-0 after:bottom-[-0.35rem] after:block after:h-full after:w-full after:bg-black after:transition-all after:duration-200 after:ease-out after:content-[''] peer-checked:bg-transparent before:peer-checked:top-0 before:peer-checked:w-full before:peer-checked:rotate-45 before:peer-checked:transform after:peer-checked:bottom-0 after:peer-checked:w-full after:peer-checked:-rotate-45 after:peer-checked:transform"></div>
       <div className="fixed inset-0 z-40 hidden h-full w-full bg-black/50 backdrop-blur-sm peer-checked:block">
         &nbsp;
@@ -77,13 +90,15 @@ const MobileMenu = () => {
                 </svg>
               </a>
             </div>
+
             <a
+              onClick={() => closeMenu()}
               href={
                 location.pathname == "/solar-energy"
                   ? "/configurator"
                   : "#contact"
               }
-              className="inline-flex items-center rounded-[42px] text-white bg-linear-contact pb-1.5 pt-1 px-3 text-sm font-thin tracking-wider"
+              className="inline-flex items-center rounded-[42px] text-white bg-linear-contact pb-1.5 pt-1 px-3 text-sm font-thin tracking-wider transition duration-500 peer-checked:translate-x-0"
             >
               <svg
                 className="me-1.5 mt-0.5"
