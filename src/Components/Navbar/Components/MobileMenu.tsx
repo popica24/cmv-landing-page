@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const MobileMenu = () => {
   const location = useLocation();
@@ -29,13 +29,13 @@ const MobileMenu = () => {
         <div className="float-right min-h-full w-[85%] bg-white px-6 pt-12 shadow-2xl">
           <menu>
             <li>
-              <a href="/">Civil and Industrial</a>
+              <Link to={"/"}>Civil and Industrial</Link>
             </li>
             <li>
-              <a href="/solar-energy">Solar energy</a>
+              <Link to={"/solar-energy"}>Solar energy</Link>
             </li>
             <li>
-              <a href="/marine-services">Marin Services</a>
+              <Link to={"/marine-services"}>Marin Services</Link>
             </li>
             <div className="flex flex-row items-center my-3">
               <a
