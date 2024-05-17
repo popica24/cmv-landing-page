@@ -1,5 +1,3 @@
-import Footer from "../../Components/Footer/Footer";
-import Navbar from "../../Components/Navbar/Navbar";
 import Ship from "./Components/Ship";
 import MarineService from "./MarineService";
 
@@ -8,8 +6,6 @@ const Marine = () => {
 
   return (
     <>
-      <Navbar />
-
       <div className="mt-12 lg:mt-48">
         <div className="flex flex-col items-center justify-center font-roboto w-full">
           <div className="relative">
@@ -62,7 +58,6 @@ const Marine = () => {
         </div>
       </div>
       <MarineService />
-      <Footer />
     </>
   );
 };
