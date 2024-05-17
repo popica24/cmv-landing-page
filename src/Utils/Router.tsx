@@ -13,16 +13,18 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<Civil />} />
-      <Route path="/solar-energy" element={<Solar />} />
+      <Route path="solar-energy" element={<Solar />} />
       <Route
-        path="/configurator"
+        path="configurator"
         element={
           <ConfiguratorProvider>
             <Configurator />
           </ConfiguratorProvider>
         }
       />
-      <Route path="/marine-services" element={<Marine />} />
+      <Route path="marine-services" element={<Marine />} />
+      <Route path="/*" element={<Civil />} />
     </>
+    
   )
 );
